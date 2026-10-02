@@ -25,16 +25,14 @@
 .support-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
+  gap: 24px;\r\n}
 
 .support-card {
   background: #fff;
   border: 1px solid #ded6c4;
   border-radius: 5px;
-  padding: 25px 22px;
-  min-height: 205px;
-  transition: .2s ease;
+  padding: 0 0 28px;\r\n  min-height: 420px;
+  overflow: hidden;\r\n  transition: .2s ease;
   position: relative;
 }
 
@@ -56,13 +54,13 @@
   margin-bottom: 17px;
 }
 
-.support-card h3 {
+.support-card h3 {\r\n  padding: 0 24px;
   font: 700 18px var(--serif);
   letter-spacing: -.035em;
   margin-bottom: 8px;
 }
 
-.support-card p {
+.support-card p {\r\n  padding: 0 24px;
   color: var(--muted);
   font-size: 11px;
   line-height: 1.65;
@@ -236,8 +234,7 @@
 .jobs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
+  gap: 24px;\r\n}
 
 .job-card {
   background: #fff;
@@ -351,11 +348,11 @@
     min-height: 190px;
   }
 
-  .support-card h3 {
+  .support-card h3 {\r\n  padding: 0 24px;
     font-size: 15px;
   }
 
-  .support-card p {
+  .support-card p {\r\n  padding: 0 24px;
     font-size: 9px;
   }
 
@@ -413,8 +410,7 @@
 /* Support Center service images */
 .support-card-image {
   width: calc(100% + 44px);
-  height: 150px;
-  margin: -25px -22px 20px;
+  height: 250px;\r\n  margin: 0 0 24px;
   overflow: hidden;
   border-radius: 5px 5px 0 0;
 }
@@ -553,199 +549,6 @@
           Built for reliability. Designed for performance. Delivered with care.
         </div>
       </div>
-
-<section class="section support-section" id="support">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <div class="kicker">MELTECH SUPPORT CENTER</div>
-        <h2>Need technical support?</h2>
-      </div>
-      <p class="section-intro">
-        Get help with HVAC, refrigeration, electrical systems, appliances,
-        automation and power solutions.
-      </p>
-    </div>
-
-    <div class="support-grid">
-
-      <article class="support-card">
-
-        <div class="support-card-image">
-  <img src="assets/hvac-equipment.webp" alt="HVAC and air conditioning equipment supported by Meltech">
-</div>
-<h3>HVAC & Air Conditioning</h3>
-        <p>Installation, servicing, maintenance, troubleshooting and repairs.</p>
-        <a href="#support-form">Get Support ↗</a>
-      </article>
-
-      <article class="support-card">
-
-        <div class="support-card-image">
-  <img src="assets/commercial-chiller.webp" alt="Commercial refrigeration and cold room equipment supported by Meltech">
-</div>
-<h3>Refrigeration & Cold Rooms</h3>
-        <p>Cold rooms, commercial refrigeration, compressors and controls.</p>
-        <a href="#support-form">Get Support ↗</a>
-      </article>
-
-      <article class="support-card">
-
-        <div class="support-card-image">
-  <img src="assets/industrial-power-control.webp" alt="Industrial electrical power and control equipment supported by Meltech">
-</div>
-<h3>Electrical Services</h3>
-        <p>Electrical faults, installations, panels, controls and maintenance.</p>
-        <a href="#support-form">Get Support ↗</a>
-      </article>
-
-      <article class="support-card">
-
-        <div class="support-card-image">
-  <img src="assets/automation-equipment.webp" alt="Industrial automation and control equipment supported by Meltech">
-</div>
-<h3>Automation & Controls</h3>
-        <p>PLC, HMI, control panels, sensors and industrial automation support.</p>
-        <a href="#support-form">Get Support ↗</a>
-      </article>
-
-      <article class="support-card">
-
-        <div class="support-card-image">
-  <img src="assets/energy-equipment.webp" alt="Solar, inverter and backup power equipment supported by Meltech">
-</div>
-<h3>Power & Backup</h3>
-        <p>Solar, batteries, inverters, generators and backup power systems.</p>
-        <a href="#support-form">Get Support ↗</a>
-      </article>
-
-      <article class="support-card">
-
-        <div class="support-card-image">
-  <img src="assets/laundry-equipment.webp" alt="Commercial and domestic laundry equipment supported by Meltech">
-</div>
-<h3>Laundry & Appliances</h3>
-        <p>Commercial and domestic washing machines, dryers and appliances.</p>
-        <a href="#support-form">Get Support ↗</a>
-      </article>
-
-    </div>
-
-    <div class="support-form-wrap" id="support-form">
-      <div class="support-form-copy">
-        <div class="kicker">TECHNICAL ASSISTANCE</div>
-        <h2>Submit a support request.</h2>
-        <p>
-          Tell us about the equipment or problem and our team can follow up
-          with you through your preferred contact method.
-        </p>
-      </div>
-
-      <form class="support-form" id="support-request-form">
-
-        <div class="field-row">
-          <label>
-            Your name
-            <input name="name" autocomplete="name" required
-                   placeholder="e.g. Alex Kiptoo">
-          </label>
-
-          <label>
-            Phone / WhatsApp
-            <input name="phone" type="tel" autocomplete="tel" required
-                   placeholder="e.g. 07xx xxx xxx">
-          </label>
-        </div>
-
-        <div class="field-row">
-          <label>
-            Email <small>(optional)</small>
-            <input name="email" type="email" autocomplete="email"
-                   placeholder="you@example.com">
-          </label>
-
-          <label>
-            Location / Town
-            <input name="location" autocomplete="address-level2" required
-                   placeholder="e.g. Eldoret">
-          </label>
-        </div>
-
-        <div class="field-row">
-          <label>
-            Service category
-            <select name="category" required>
-              <option value="" disabled selected>Select a category</option>
-              <option>HVAC & Air Conditioning</option>
-              <option>Refrigeration & Cold Rooms</option>
-              <option>Electrical Services</option>
-              <option>Automation & Controls</option>
-              <option>Power & Backup</option>
-              <option>Laundry & Appliances</option>
-              <option>Other</option>
-            </select>
-          </label>
-
-          <label>
-            Priority
-            <select name="priority" required>
-              <option>Normal</option>
-              <option>Urgent</option>
-              <option>Emergency</option>
-            </select>
-          </label>
-        </div>
-
-        <div class="field-row">
-          <label>
-            Equipment / System
-            <input name="equipment"
-                   placeholder="e.g. LG AC, cold room, washing machine">
-          </label>
-
-          <label>
-            Model / Serial Number <small>(optional)</small>
-            <input name="model"
-                   placeholder="Model or serial number">
-          </label>
-        </div>
-
-        <label>
-          Describe the problem
-          <textarea name="problem" rows="5" required
-                    placeholder="Describe the fault, symptoms or assistance you need."></textarea>
-        </label>
-
-        <label>
-          Preferred contact method
-          <select name="contact_method" required>
-            <option>WhatsApp</option>
-            <option>Phone Call</option>
-            <option>Email</option>
-          </select>
-        </label>
-
-        <label class="support-consent">
-          <input type="checkbox" required>
-          <span>
-            I agree that Meltech may use the information provided to respond
-            to this support request.
-          </span>
-        </label>
-
-        <button class="button button-gold support-submit" type="submit">
-          Submit Support Request ↗
-        </button>
-
-        <p class="form-note">
-          Your request will open WhatsApp as a draft message. Nothing is sent
-          until you review and press Send.
-        </p>
-
-      </form>
-    </div>
-  </div>
-</section>
 
 <section class="section support-section" id="support">
   <div class="wrap">
@@ -1237,4 +1040,7 @@ if (careerForm) {
 </script>
 </body>
 </html>
+
+
+
 
