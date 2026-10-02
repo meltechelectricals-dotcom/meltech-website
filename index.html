@@ -14,11 +14,240 @@
 
 .quote{background:#eae8e1}.quote-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:start}.quote-copy{position:sticky;top:125px}.quote-copy h2{font:700 clamp(32px,4vw,48px)/1.08 var(--serif);letter-spacing:-.06em;margin:12px 0}.quote-copy>p{font-size:13px;line-height:1.8;color:#62635d}.quote-points{display:flex;flex-direction:column;gap:13px;margin-top:27px;font-size:11px;color:#4c4d47}.quote-points b{color:#a17113;margin-right:7px}.quote-form{background:#fff;border:1px solid #ded6c4;border-radius:5px;padding:26px;box-shadow:0 12px 30px #3430180a}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.quote-form label{display:flex;flex-direction:column;gap:7px;font-size:10px;letter-spacing:.04em;font-weight:700;color:#363730;margin-bottom:15px}.quote-form label small{font-weight:400;color:#87877e}.quote-form input,.quote-form select,.quote-form textarea{width:100%;border:1px solid #d8d8d0;background:#fafaf8;border-radius:3px;padding:12px 11px;font:400 12px var(--sans);color:#1b1c18;outline:none}.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{border-color:#c8911d;box-shadow:0 0 0 3px #dfa92320}.quote-form textarea{resize:vertical;min-height:100px}.quote-submit{cursor:pointer;min-width:205px}.form-note{font-size:9px!important;line-height:1.6!important;color:#77766e!important;margin:12px 0 0!important}
 @media(max-width:650px){.quote-grid{grid-template-columns:1fr;gap:22px}.quote-copy{position:static}.quote-points{gap:9px;margin-top:17px}.quote-form{padding:18px 15px}.field-row{grid-template-columns:1fr;gap:0}.quote-form label{margin-bottom:13px}.quote-submit{width:100%}}
-</style>
+/* =========================================================
+   MELTECH CORPORATE CAREERS
+   ========================================================= */
+
+.careers-section {
+  background: var(--paper);
+}
+
+.careers-section .section-head {
+  margin-bottom: 42px;
+}
+
+.careers-section .section-intro {
+  max-width: 560px;
+}
+
+.careers-hero {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 40px;
+  align-items: stretch;
+  margin-bottom: 55px;
+}
+
+.careers-hero-content {
+  background: var(--black);
+  color: var(--white);
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 330px;
+}
+
+.careers-label {
+  display: inline-block;
+  color: var(--gold2);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  margin-bottom: 18px;
+}
+
+.careers-hero-content h3 {
+  margin: 0 0 18px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+}
+
+.careers-hero-content p {
+  color: #d8d8d2;
+  max-width: 620px;
+  line-height: 1.8;
+  margin: 0 0 28px;
+}
+
+.careers-hero-content .button {
+  align-self: flex-start;
+}
+
+.careers-visual {
+  background: var(--black2);
+  min-height: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.careers-visual img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  opacity: .22;
+}
+
+.careers-visual::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(232,170,41,.35);
+  pointer-events: none;
+}
+
+.career-areas {
+  margin-bottom: 55px;
+}
+
+.career-areas h3,
+.career-application h3 {
+  margin-bottom: 25px;
+}
+
+.career-area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.career-area {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 25px;
+  min-height: 130px;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.career-area:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+}
+
+.career-area strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.career-area span {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.career-application {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 45px;
+}
+
+.career-application-intro {
+  max-width: 700px;
+  margin-bottom: 30px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.application-form {
+  display: grid;
+  gap: 20px;
+}
+
+.application-form .field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.application-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.application-form input,
+.application-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 14px 15px;
+  font: inherit;
+  color: var(--ink);
+  box-sizing: border-box;
+}
+
+.application-form input:focus,
+.application-form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.application-form textarea {
+  resize: vertical;
+}
+
+.file-note {
+  color: var(--muted);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.support-consent {
+  display: flex !important;
+  grid-template-columns: auto 1fr;
+  align-items: flex-start;
+  gap: 10px !important;
+  font-weight: 400 !important;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.support-consent input {
+  width: auto;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .careers-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .career-area-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .careers-hero-content {
+    padding: 35px 25px;
+  }
+
+  .career-area-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-application {
+    padding: 30px 20px;
+  }
+
+  .application-form .field-row {
+    grid-template-columns: 1fr;
+  }
+}</style>
 </head>
 <body>
 <div class="top"><div class="wrap"><span>Eldoret, Kenya <b style="color:#d49b26">·</b> Mon–Sat, 8:00 AM–6:00 PM</span><div class="top-links"><a href="mailto:Meltechelectricals@gmail.com">Meltechelectricals@gmail.com</a><a href="tel:+254707494395">+254 707 494 395</a></div></div></div>
-<header><nav class="wrap nav" aria-label="Main navigation"><a class="brand" href="#home"><img src="assets/meltech-official.webp" alt="Meltech snowflake and lightning emblem"><span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span></a><div class="nav-links" id="navigation"><a href="#solutions">Solutions</a><a href="#about">About</a><a href="#process">How we work</a><a href="#contact">Contact</a></div><a class="button button-gold" href="#quote">Request a quote ↗</a><button class="menu" aria-label="Open menu" aria-expanded="false">☰</button></nav></header>
+<header><nav class="wrap nav" aria-label="Main navigation"><a class="brand" href="#home"><img src="assets/meltech-official.webp" alt="Meltech snowflake and lightning emblem"><span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span></a><a href="#solutions">Solutions</a>
+<a href="#about">About</a>
+<a href="#process">How we work</a>
+<a href="#support">Support Center</a>
+<a href="#careers">Careers</a>
+<a href="#contact">Contact</a><a href="#solutions">Solutions</a><a href="#about">About</a><a href="#process">How we work</a><a href="#contact">Contact</a></div><a class="button button-gold" href="#quote">Request a quote ↗</a><button class="menu" aria-label="Open menu" aria-expanded="false">☰</button></nav></header>
 <main id="home">
 <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">HVAC · ELECTRICAL · ENERGY · ELDORET</div><h1>Powering comfort.<br><em>Delivering reliability.</em></h1><p class="hero-copy">Complete HVAC and electrical solutions for homes, businesses and industry. From clean energy and cold rooms to laundry machine repair, Meltech brings dependable service and expert installation together.</p><div class="hero-actions"><a class="button button-gold" href="tel:+254707494395">Call 0707 494 395 <span>↗</span></a><a class="button button-outline" href="#quote">Request a quote ↓</a></div><div class="hero-trust"><span class="trust-star">✦</span>Local expertise · Quality work · Established 2018</div></div><div class="hero-media"><img class="hero-photo" src="assets/hvac-equipment.webp" alt="HVAC and refrigeration equipment from Meltech's supplied service artwork"><div class="photo-tag"><strong>Comfort, engineered.</strong><span>Air conditioning · refrigeration · electrical systems</span></div></div><div class="hero-index">01 — BUILT AROUND YOUR COMFORT</div></div></section>
 <div class="service-ribbon"><div class="wrap ribbon-grid"><div class="ribbon-item"><span class="ribbon-icon">◈</span>SALES &amp; SUPPLY</div><div class="ribbon-item"><span class="ribbon-icon">⚒</span>INSTALLATION</div><div class="ribbon-item"><span class="ribbon-icon">⚙</span>MAINTENANCE</div><div class="ribbon-item"><span class="ribbon-icon">⌁</span>REPAIR</div><div class="ribbon-item"><span class="ribbon-icon">✓</span>COMMISSIONING</div></div></div>
@@ -30,12 +259,472 @@
 <section class="section why"><div class="wrap why-grid"><div><div class="kicker">THE MELTECH STANDARD</div><h2>Good work you can feel confident about.</h2><p class="why-copy">Our team takes time to understand what you need, recommend a practical solution and carry out the work carefully. From your first call to the final system check, we keep the focus on quality and customer satisfaction.</p><div class="features"><div class="feature"><span class="feature-icon">✦</span><div><b>Experienced technicians</b><span>Skilled support across our service areas.</span></div></div><div class="feature"><span class="feature-icon">◈</span><div><b>Quality focused</b><span>Thoughtful installation and dependable equipment.</span></div></div><div class="feature"><span class="feature-icon">ϟ</span><div><b>Efficient solutions</b><span>Systems selected for lasting performance.</span></div></div><div class="feature"><span class="feature-icon">◷</span><div><b>Responsive support</b><span>Maintenance and repair when you need it.</span></div></div></div></div><div class="why-image-wrap"><img class="why-image" src="assets/commercial-chiller.webp" alt="Commercial HVAC chiller and cooling tower system"><div class="image-caption">COMMERCIAL HVAC · DESIGN · INSTALLATION · MAINTENANCE</div></div></div></section>
 <section class="section about-band" id="about"><div class="wrap about-grid"><div class="about-collage"><img class="about-main" src="assets/energy-equipment.webp" alt="Solar panels, inverters, batteries and backup power systems"><img class="about-secondary" src="assets/laundry-equipment.webp" alt="Laundry machines for home and commercial use"><span class="about-note">POWERING COMFORT · DELIVERING RELIABILITY</span></div><div class="about-copy"><div class="kicker">ABOUT MELTECH</div><h2>Rooted in Eldoret. Ready for what you need.</h2><p>Meltech Electrical and Refrigeration is an Eldoret-based company established in 2018. We bring HVAC, electrical design and installation, refrigeration, clean energy, automation and laundry machine expertise together to serve homes, businesses and industries.</p><p>Our dedication to quality and customer satisfaction guides every project. We aim to make the process clear, the workmanship dependable and the result right for your space.</p><ul class="checks"><li><span class="check">✓</span>Residential &amp; commercial</li><li><span class="check">✓</span>Electrical &amp; HVAC</li><li><span class="check">✓</span>Energy &amp; automation</li><li><span class="check">✓</span>Installation &amp; repair</li></ul><div class="since"><strong>2018</strong><span>Established in Eldoret<br>Serving Kenya with care</span></div></div></div></section>
 <section class="section" id="process"><div class="wrap"><div class="section-head"><div><div class="kicker">HOW WE WORK</div><h2>Clear steps. Solid results.</h2></div><p class="section-intro">Getting support should be easy. Tell us what you need and we’ll help you work out the right next step.</p></div><div class="steps"><article class="step"><small>01 · START A CONVERSATION</small><h3>Tell us what you need</h3><p>Call or email with your project, repair or maintenance question and your location.</p></article><article class="step"><small>02 · FIND THE RIGHT FIT</small><h3>We assess &amp; advise</h3><p>We discuss your requirements and explain a practical plan for your system.</p></article><article class="step"><small>03 · GET IT DONE</small><h3>We install or repair</h3><p>Our team completes the work with care and checks the equipment before handover.</p></article></div></div></section>
+<section class="section support-section" id="support">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="kicker">MELTECH SUPPORT CENTER</div>
+        <h2>Need technical support?</h2>
+      </div>
+      <p class="section-intro">
+        Get help with HVAC, refrigeration, electrical systems, appliances,
+        automation and power solutions.
+      </p>
+    </div>
+
+    <div class="support-grid">
+
+      <article class="support-card">
+        <span class="support-icon">❄</span>
+        <h3>HVAC & Air Conditioning</h3>
+        <p>Installation, servicing, maintenance, troubleshooting and repairs.</p>
+        <a href="#support-form">Get Support ↗</a>
+      </article>
+
+      <article class="support-card">
+        <span class="support-icon">◈</span>
+        <h3>Refrigeration & Cold Rooms</h3>
+        <p>Cold rooms, commercial refrigeration, compressors and controls.</p>
+        <a href="#support-form">Get Support ↗</a>
+      </article>
+
+      <article class="support-card">
+        <span class="support-icon">ϟ</span>
+        <h3>Electrical Services</h3>
+        <p>Electrical faults, installations, panels, controls and maintenance.</p>
+        <a href="#support-form">Get Support ↗</a>
+      </article>
+
+      <article class="support-card">
+        <span class="support-icon">⚙</span>
+        <h3>Automation & Controls</h3>
+        <p>PLC, HMI, control panels, sensors and industrial automation support.</p>
+        <a href="#support-form">Get Support ↗</a>
+      </article>
+
+      <article class="support-card">
+        <span class="support-icon">⌁</span>
+        <h3>Power & Backup</h3>
+        <p>Solar, batteries, inverters, generators and backup power systems.</p>
+        <a href="#support-form">Get Support ↗</a>
+      </article>
+
+      <article class="support-card">
+        <span class="support-icon">◫</span>
+        <h3>Laundry & Appliances</h3>
+        <p>Commercial and domestic washing machines, dryers and appliances.</p>
+        <a href="#support-form">Get Support ↗</a>
+      </article>
+
+    </div>
+
+    <div class="support-form-wrap" id="support-form">
+      <div class="support-form-copy">
+        <div class="kicker">TECHNICAL ASSISTANCE</div>
+        <h2>Submit a support request.</h2>
+        <p>
+          Tell us about the equipment or problem and our team can follow up
+          with you through your preferred contact method.
+        </p>
+      </div>
+
+      <form class="support-form" id="support-request-form">
+
+        <div class="field-row">
+          <label>
+            Your name
+            <input name="name" autocomplete="name" required
+                   placeholder="e.g. Alex Kiptoo">
+          </label>
+
+          <label>
+            Phone / WhatsApp
+            <input name="phone" type="tel" autocomplete="tel" required
+                   placeholder="e.g. 07xx xxx xxx">
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label>
+            Email <small>(optional)</small>
+            <input name="email" type="email" autocomplete="email"
+                   placeholder="you@example.com">
+          </label>
+
+          <label>
+            Location / Town
+            <input name="location" autocomplete="address-level2" required
+                   placeholder="e.g. Eldoret">
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label>
+            Service category
+            <select name="category" required>
+              <option value="" disabled selected>Select a category</option>
+              <option>HVAC & Air Conditioning</option>
+              <option>Refrigeration & Cold Rooms</option>
+              <option>Electrical Services</option>
+              <option>Automation & Controls</option>
+              <option>Power & Backup</option>
+              <option>Laundry & Appliances</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>
+            Priority
+            <select name="priority" required>
+              <option>Normal</option>
+              <option>Urgent</option>
+              <option>Emergency</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label>
+            Equipment / System
+            <input name="equipment"
+                   placeholder="e.g. LG AC, cold room, washing machine">
+          </label>
+
+          <label>
+            Model / Serial Number <small>(optional)</small>
+            <input name="model"
+                   placeholder="Model or serial number">
+          </label>
+        </div>
+
+        <label>
+          Describe the problem
+          <textarea name="problem" rows="5" required
+                    placeholder="Describe the fault, symptoms or assistance you need."></textarea>
+        </label>
+
+        <label>
+          Preferred contact method
+          <select name="contact_method" required>
+            <option>WhatsApp</option>
+            <option>Phone Call</option>
+            <option>Email</option>
+          </select>
+        </label>
+
+        <label class="support-consent">
+          <input type="checkbox" required>
+          <span>
+            I agree that Meltech may use the information provided to respond
+            to this support request.
+          </span>
+        </label>
+
+        <button class="button button-gold support-submit" type="submit">
+          Submit Support Request ↗
+        </button>
+
+        <p class="form-note">
+          Your request will open WhatsApp as a draft message. Nothing is sent
+          until you review and press Send.
+        </p>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section careers-section" id="careers">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div>
+        <div class="kicker">CAREERS AT MELTECH</div>
+        <h2>Build your career with us.</h2>
+      </div>
+
+      <p class="section-intro">
+        We welcome skilled, reliable and motivated people interested in
+        electrical, HVAC, refrigeration, energy and technical services.
+      </p>
+    </div>
+
+    <div class="career-banner">
+      <div>
+        <span class="career-label">WORK WITH MELTECH</span>
+        <h3>Interested in joining our team?</h3>
+        <p>
+          When positions become available, we will publish the opportunity
+          and application requirements here.
+        </p>
+      </div>
+
+      <a class="button button-gold" href="#job-application">
+        Submit Your CV ↗
+      </a>
+    </div>
+
+    <div class="jobs-grid">
+
+      <article class="job-card">
+        <span class="job-status">OPEN OPPORTUNITIES</span>
+        <h3>Technical & Engineering Roles</h3>
+        <p>
+          Opportunities may include electrical, HVAC, refrigeration,
+          appliance repair, automation and energy technicians.
+        </p>
+        <div class="job-meta">
+          <span>📍 Eldoret / Kenya</span>
+          <span>⚒ Technical</span>
+        </div>
+        <a href="#job-application">Apply / Send CV ↗</a>
+      </article>
+
+      <article class="job-card">
+        <span class="job-status">GENERAL APPLICATION</span>
+        <h3>Send Us Your CV</h3>
+        <p>
+          Don't see a suitable vacancy? You can still submit your details
+          for consideration when relevant opportunities arise.
+        </p>
+        <div class="job-meta">
+          <span>📍 Kenya</span>
+          <span>◈ Future Opportunities</span>
+        </div>
+        <a href="#job-application">Submit Application ↗</a>
+      </article>
+
+    </div>
+
+    <div class="application-wrap" id="job-application">
+
+      <div>
+        <div class="kicker">JOB APPLICATION</div>
+        <h2>Submit your details.</h2>
+        <p>
+          Complete the form and prepare your CV. The application will be
+          opened as a WhatsApp message for your review.
+        </p>
+      </div>
+
+      <form class="application-form" id="career-form">
+
+        <div class="field-row">
+          <label>
+            Full name
+            <input name="applicant_name" autocomplete="name" required
+                   placeholder="Your full name">
+          </label>
+
+          <label>
+            Phone number
+            <input name="applicant_phone" type="tel" required
+                   placeholder="07xx xxx xxx">
+          </label>
+        </div>
+
+        <div class="field-row">
+          <label>
+            Email
+            <input name="applicant_email" type="email"
+                   placeholder="you@example.com">
+          </label>
+
+          <label>
+            Position / Area of interest
+            <input name="position" required
+                   placeholder="e.g. Electrical Technician">
+          </label>
+        </div>
+
+        <label>
+          Experience / Short introduction
+          <textarea name="experience" rows="5" required
+                    placeholder="Briefly tell us about your skills and experience."></textarea>
+        </label>
+
+        <label>
+          CV / Application document
+          <input name="cv" type="file"
+                 accept=".pdf,.doc,.docx">
+          <small class="file-note">
+            CV upload is prepared for future online application handling.
+            For now, you can attach your CV directly in WhatsApp after the
+            message opens.
+          </small>
+        </label>
+
+        <label class="support-consent">
+          <input type="checkbox" required>
+          <span>
+            I agree that Meltech may use the information provided for
+            recruitment and employment-related communication.
+          </span>
+        </label>
+
+        <button class="button button-gold" type="submit">
+          Continue Application ↗
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
 <section class="section quote" id="quote"><div class="wrap quote-grid"><div class="quote-copy"><div class="kicker">QUOTATION REQUEST</div><h2>Tell us what you need.</h2><p>Share a few details and we’ll prepare a WhatsApp message for the Meltech team. Check it, add anything else you need, then tap Send in WhatsApp.</p><div class="quote-points"><span><b>✓</b> No account needed</span><span><b>✓</b> Message goes straight to Meltech</span><span><b>✓</b> You review it before sending</span></div></div><form class="quote-form" id="quote-form"><div class="field-row"><label>Your name<input name="name" autocomplete="name" required placeholder="e.g. Alex Kiptoo"></label><label>Phone number <small>(optional)</small><input name="phone" type="tel" autocomplete="tel" placeholder="e.g. 07xx xxx xxx"></label></div><div class="field-row"><label>Service needed<select name="service" required><option value="" disabled selected>Select a service</option><option>HVAC / air conditioning</option><option>Refrigeration / cold room</option><option>Electrical design or installation</option><option>Solar / backup power</option><option>Industrial automation / controls</option><option>Laundry machine sales or repair</option><option>Maintenance or general enquiry</option></select></label><label>Project location<input name="location" autocomplete="address-level2" required placeholder="Town or area"></label></div><label>What do you need help with?<textarea name="details" rows="4" required placeholder="Tell us about the system, issue or project. Include useful details such as equipment type or preferred timing."></textarea></label><button class="button button-gold quote-submit" type="submit">Continue to WhatsApp <span>↗</span></button><p class="form-note">This form opens WhatsApp with your details in a draft message. It does not send anything until you press Send in WhatsApp.</p></form></div></section>
 <section class="contact" id="contact"><div class="wrap contact-box"><div class="contact-content"><div class="eyebrow">YOUR NEXT PROJECT STARTS HERE</div><h2>Let's power what matters.</h2><p>Call Meltech for dependable electrical, HVAC, energy and refrigeration service.</p></div><div class="contact-actions"><a class="button button-gold" href="#quote">Request a quote ↗</a><a class="button button-outline" href="tel:+254707494395">Call 0707 494 395</a></div></div></section>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#home"><img src="assets/meltech-official.webp" alt=""><span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span></a><p>Powering comfort and delivering reliable electrical, HVAC, clean energy, refrigeration and laundry solutions.</p></div><div><div class="footer-title">EXPLORE</div><div class="footer-links"><a href="#solutions">Our solutions</a><a href="#about">About Meltech</a><a href="#process">How we work</a></div></div><div><div class="footer-title">SOLUTIONS</div><div class="footer-links"><a href="#solutions">HVAC &amp; refrigeration</a><a href="#solutions">Clean energy</a><a href="#solutions">Electrical &amp; automation</a><a href="#solutions">Laundry systems</a></div></div><div><div class="footer-title">CONTACT</div><div class="footer-links"><a href="tel:+254707494395">+254 707 494 395</a><a href="mailto:Meltechelectricals@gmail.com">Meltechelectricals@gmail.com</a><span>Eldoret, Kenya</span><span>Mon–Sat · 8:00 AM–6:00 PM</span></div></div></div><div class="footend"><span>© 2026 Meltech Electrical &amp; Refrigeration Services</span><span>Powering comfort. Delivering reliability.</span></div></div></footer>
 <a class="mobile-call" href="tel:+254707494395">☎ &nbsp; Call Meltech · +254 707 494 395</a>
-<script>const menu=document.querySelector('.menu'),nav=document.querySelector('.nav-links');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));document.querySelector('#quote-form').addEventListener('submit',event=>{event.preventDefault();const form=new FormData(event.currentTarget);const lines=['Hello Meltech, I would like to request a quotation.','',`Name: ${form.get('name')}`,`Phone: ${form.get('phone')||'Not provided'}`,`Service: ${form.get('service')}`,`Location: ${form.get('location')}`,'',`Project details: ${form.get('details')}`];const url='https://wa.me/254707494395?text='+encodeURIComponent(lines.join('\n'));window.open(url,'_blank','noopener,noreferrer')});</script>
+<script>
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav-links');
+
+if (menu && nav) {
+  menu.addEventListener('click', function () {
+    const open = nav.classList.toggle('open');
+
+    menu.setAttribute('aria-expanded', String(open));
+    menu.textContent = open ? '×' : '☰';
+  });
+
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.textContent = '☰';
+    });
+  });
+}
+
+
+/* QUOTATION REQUEST */
+
+const quoteForm = document.querySelector('#quote-form');
+
+if (quoteForm) {
+  quoteForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = new FormData(event.currentTarget);
+
+    const lines = [
+      'Hello Meltech, I would like to request a quotation.',
+      '',
+      'Name: ' + form.get('name'),
+      'Phone: ' + (form.get('phone') || 'Not provided'),
+      'Service: ' + form.get('service'),
+      'Location: ' + form.get('location'),
+      '',
+      'Project details:',
+      form.get('details')
+    ];
+
+    const url =
+      'https://wa.me/254707494395?text=' +
+      encodeURIComponent(lines.join('\n'));
+
+    window.open(url, '_blank');
+  });
+}
+
+
+/* SUPPORT REQUEST */
+
+const supportForm =
+  document.querySelector('#support-request-form');
+
+if (supportForm) {
+  supportForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = new FormData(event.currentTarget);
+
+    const ticketNumber =
+      'MEL-SUP-' +
+      Math.floor(100000 + Math.random() * 900000);
+
+    const lines = [
+      'Hello Meltech, I would like to submit a technical support request.',
+      '',
+      'Support Ticket: ' + ticketNumber,
+      'Name: ' + form.get('name'),
+      'Phone / WhatsApp: ' + form.get('phone'),
+      'Email: ' + (form.get('email') || 'Not provided'),
+      'Location: ' + form.get('location'),
+      'Service: ' + form.get('category'),
+      'Priority: ' + form.get('priority'),
+      'Equipment / System: ' +
+        (form.get('equipment') || 'Not provided'),
+      'Model / Serial: ' +
+        (form.get('model') || 'Not provided'),
+      '',
+      'Problem description:',
+      form.get('problem'),
+      '',
+      'Preferred contact: ' + form.get('contact_method')
+    ];
+
+    const whatsappUrl =
+      'https://wa.me/254707494395?text=' +
+      encodeURIComponent(lines.join('\n'));
+
+    alert(
+      'Your support request has been prepared.\n\n' +
+      'Ticket Number: ' + ticketNumber
+    );
+
+    window.open(whatsappUrl, '_blank');
+  });
+}
+
+
+/* CAREERS APPLICATION */
+
+const careerForm =
+  document.querySelector('#career-form');
+
+if (careerForm) {
+  careerForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = new FormData(event.currentTarget);
+
+    const applicationNumber =
+      'MEL-JOB-' +
+      Math.floor(100000 + Math.random() * 900000);
+
+    const lines = [
+      'Hello Meltech, I would like to submit a job application.',
+      '',
+      'Application Reference: ' + applicationNumber,
+      'Full Name: ' + form.get('applicant_name'),
+      'Phone: ' + form.get('applicant_phone'),
+      'Email: ' +
+        (form.get('applicant_email') || 'Not provided'),
+      'Position / Area of Interest: ' +
+        form.get('position'),
+      '',
+      'Experience / Introduction:',
+      form.get('experience'),
+      '',
+      'I will attach my CV/document to this WhatsApp conversation.'
+    ];
+
+    const whatsappUrl =
+      'https://wa.me/254707494395?text=' +
+      encodeURIComponent(lines.join('\n'));
+
+    alert(
+      'Your application has been prepared.\n\n' +
+      'Application Reference: ' + applicationNumber +
+      '\n\nPlease attach your CV in WhatsApp before sending.'
+    );
+
+    window.open(whatsappUrl, '_blank');
+  });
+}
+</script>
 </body>
 </html>
 
