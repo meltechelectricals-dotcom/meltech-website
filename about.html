@@ -1,0 +1,942 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About MELTECH | Electrical, HVAC & Refrigeration Services</title>
+
+  <meta name="description" content="Learn about MELTECH Electricals and Refrigeration Services, a Kenya-based technical services company providing electrical, HVAC, refrigeration, clean energy, automation and laundry solutions.">
+
+  <link rel="icon" type="image/webp" href="assets/meltech-official.webp">
+
+  <style>
+    :root{
+      --black:#080808;
+      --black-2:#111111;
+      --gold:#d4af37;
+      --gold-light:#f0d878;
+      --white:#ffffff;
+      --muted:#a9a9a9;
+      --line:rgba(212,175,55,.22);
+      --card:#151515;
+      --max:1180px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--black);
+      color:var(--white);
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .wrap{
+      width:min(var(--max), calc(100% - 40px));
+      margin:auto;
+    }
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(8,8,8,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(12px);
+    }
+
+    .nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .brand img{
+      width:54px;
+      height:54px;
+      object-fit:contain;
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.15;
+    }
+
+    .brand-name{
+      font-size:17px;
+      letter-spacing:.12em;
+    }
+
+    .brand-sub{
+      color:var(--gold);
+      font-size:9px;
+      letter-spacing:.18em;
+      margin-top:4px;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .nav-links a{
+      color:#ddd;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.04em;
+      transition:.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active{
+      color:var(--gold-light);
+    }
+
+    .nav-cta{
+      border:1px solid var(--gold);
+      padding:11px 17px;
+      color:var(--gold-light)!important;
+    }
+
+    .nav-cta:hover{
+      background:var(--gold);
+      color:#000!important;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:440px;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid var(--line);
+      background:
+        radial-gradient(circle at 80% 30%, rgba(212,175,55,.12), transparent 35%),
+        linear-gradient(135deg,#080808 0%,#111111 55%,#080808 100%);
+    }
+
+    .hero:after{
+      content:"";
+      position:absolute;
+      right:-140px;
+      top:-180px;
+      width:500px;
+      height:500px;
+      border:1px solid rgba(212,175,55,.12);
+      border-radius:50%;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:800px;
+      padding:80px 0;
+    }
+
+    .kicker{
+      color:var(--gold);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.22em;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-size:clamp(42px,6vw,76px);
+      line-height:1.02;
+      letter-spacing:-.04em;
+      max-width:850px;
+      margin-bottom:24px;
+    }
+
+    .hero h1 span{
+      color:var(--gold-light);
+    }
+
+    .hero p{
+      max-width:720px;
+      color:#bdbdbd;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    /* INTRO */
+
+    .section{
+  padding:72px 0;
+  position:relative;
+  overflow:hidden;
+}
+
+.section:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 15% 35%, rgba(212,175,55,.10), transparent 30%),
+    radial-gradient(circle at 85% 65%, rgba(212,175,55,.06), transparent 28%),
+    linear-gradient(90deg, transparent 49.8%, rgba(212,175,55,.035) 50%, transparent 50.2%);
+  opacity:.9;
+}
+
+.section > .wrap{
+  position:relative;
+  z-index:1;
+}
+
+    .intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:55px;
+  align-items:start;
+  margin-top:-8px;
+}
+
+    .section-label{
+      color:var(--gold);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.2em;
+      margin-bottom:16px;
+    }
+
+    .intro-grid h2{
+      font-size:clamp(30px,4vw,48px);
+      line-height:1.08;
+      letter-spacing:-.035em;
+    }
+
+    .intro-copy{
+      color:#b8b8b8;
+      font-size:16px;
+      line-height:1.85;
+    }
+
+    .intro-copy p + p{
+      margin-top:20px;
+    }
+
+    /* VALUES STRIP */
+
+    .values{
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:#0d0d0d;
+    }
+
+    .values-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+    }
+
+    .value{
+      padding:34px 30px;
+      border-right:1px solid var(--line);
+    }
+
+    .value:last-child{
+      border-right:0;
+    }
+
+    .value-number{
+      color:var(--gold);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.15em;
+      margin-bottom:10px;
+    }
+
+    .value h3{
+      font-size:20px;
+      margin-bottom:8px;
+    }
+
+    .value p{
+      color:#999;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    /* CAPABILITIES */
+
+    .capabilities-head{
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      align-items:end;
+      margin-bottom:45px;
+    }
+
+    .capabilities-head h2{
+      font-size:clamp(32px,4vw,52px);
+      line-height:1.05;
+      letter-spacing:-.04em;
+    }
+
+    .capabilities-head p{
+      max-width:470px;
+      color:#999;
+      font-size:15px;
+    }
+
+    .capabilities{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .capability{
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.07);
+      padding:30px;
+      min-height:205px;
+      position:relative;
+      overflow:hidden;
+      transition:.25s ease;
+    }
+
+    .capability:before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      width:3px;
+      height:100%;
+      background:var(--gold);
+      transform:scaleY(0);
+      transform-origin:bottom;
+      transition:.25s ease;
+    }
+
+    .capability:hover{
+      transform:translateY(-4px);
+      border-color:rgba(212,175,55,.35);
+    }
+
+    .capability:hover:before{
+      transform:scaleY(1);
+    }
+
+    .capability-number{
+      color:var(--gold);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.15em;
+      margin-bottom:25px;
+    }
+
+    .capability h3{
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .capability p{
+      color:#999;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    .arrow{
+      position:absolute;
+      right:25px;
+      bottom:22px;
+      color:var(--gold);
+      font-size:20px;
+    }
+
+    /* STATEMENT */
+
+    .statement{
+      padding:100px 0;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:
+        linear-gradient(rgba(8,8,8,.88),rgba(8,8,8,.94)),
+        url("assets/commercial-chiller.webp") center/cover;
+    }
+
+    .statement-inner{
+      max-width:900px;
+    }
+
+    .statement h2{
+      font-size:clamp(32px,5vw,62px);
+      line-height:1.08;
+      letter-spacing:-.04em;
+    }
+
+    .statement h2 span{
+      color:var(--gold-light);
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:70px 0;
+    }
+
+    .cta-box{
+      border:1px solid var(--gold);
+      padding:45px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:35px;
+      background:linear-gradient(120deg,#111,#090909);
+    }
+
+    .cta-box h2{
+      font-size:32px;
+      margin-bottom:8px;
+    }
+
+    .cta-box p{
+      color:#999;
+      max-width:620px;
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 24px;
+      background:var(--gold);
+      color:#000;
+      font-weight:800;
+      white-space:nowrap;
+      border:1px solid var(--gold);
+      transition:.2s ease;
+    }
+
+    .button:hover{
+      background:transparent;
+      color:var(--gold-light);
+    }
+
+    /* FOOTER */
+
+    footer{
+      border-top:1px solid var(--line);
+      background:#050505;
+      padding:55px 0 25px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.5fr 1fr 1fr;
+      gap:50px;
+      padding-bottom:45px;
+    }
+
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:20px;
+    }
+
+    .footer-brand img{
+      width:48px;
+      height:48px;
+      object-fit:contain;
+    }
+
+    .footer-brand strong{
+      letter-spacing:.1em;
+    }
+
+    .footer-text{
+      color:#888;
+      font-size:14px;
+      line-height:1.8;
+      max-width:430px;
+    }
+
+    .footer-title{
+      color:var(--gold);
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.18em;
+      margin-bottom:18px;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+
+    .footer-links a{
+      color:#aaa;
+      font-size:14px;
+    }
+
+    .footer-links a:hover{
+      color:var(--gold-light);
+    }
+
+    .footer-contact{
+      color:#aaa;
+      font-size:14px;
+      line-height:2;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:20px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      color:#666;
+      font-size:12px;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:850px){
+      .nav-links{
+        display:none;
+      }
+
+      .intro-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+      }
+
+      .values-grid{
+        grid-template-columns:1fr;
+      }
+
+      .value{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+      }
+
+      .value:last-child{
+        border-bottom:0;
+      }
+
+      .capabilities{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .capabilities-head{
+        display:block;
+      }
+
+      .capabilities-head p{
+        margin-top:18px;
+      }
+
+      .cta-box{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+    @media(max-width:560px){
+      .wrap{
+        width:min(var(--max), calc(100% - 28px));
+      }
+
+      .nav{
+        min-height:72px;
+      }
+
+      .brand img{
+        width:45px;
+        height:45px;
+      }
+
+      .brand-name{
+        font-size:14px;
+      }
+
+      .brand-sub{
+        font-size:7px;
+      }
+
+      .hero{
+        min-height:400px;
+      }
+
+      .hero-content{
+        padding:65px 0;
+      }
+
+      .hero h1{
+        font-size:43px;
+      }
+
+      .section{
+        padding:65px 0;
+      }
+
+      .capabilities{
+        grid-template-columns:1fr;
+      }
+
+      .statement{
+        padding:75px 0;
+      }
+
+      .cta-box{
+        padding:30px 25px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+
+    <a href="index.html" class="brand">
+      <img src="assets/meltech-official.webp" alt="MELTECH">
+      <span class="brand-text">
+        <span class="brand-name">MELTECH</span>
+        <span class="brand-sub">ELECTRICALS &amp; REFRIGERATION</span>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="index.html#solutions">Solutions</a>
+      <a href="index.html#support">Support</a>
+      <a href="index.html#quote" class="nav-cta">Request a Quote</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-content">
+        <div class="kicker">ABOUT MELTECH</div>
+
+        <h1>
+          Technical expertise.
+          <span>Practical solutions.</span>
+          Reliable results.
+        </h1>
+
+        <p>
+          A Kenya-based technical services company delivering dependable
+          electrical, HVAC, refrigeration, clean energy, automation and
+          commercial laundry solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+
+  <section class="section">
+    <div class="wrap intro-grid">
+
+      <div>
+        <div class="section-label">WHO WE ARE</div>
+
+        <h2>
+          Engineering solutions built around<br>your needs.
+        </h2>
+      </div>
+
+      <div class="intro-copy">
+
+        <p>
+          MELTECH Electricals and Refrigeration Services is a Kenya-based
+          technical services company providing professional solutions across
+          electrical systems, HVAC &amp; refrigeration, clean energy,
+          industrial automation and commercial laundry.
+        </p>
+
+        <p>
+          We work with residential, commercial and industrial clients,
+          combining practical engineering expertise, quality workmanship and
+          responsive support to deliver systems that perform efficiently,
+          safely and reliably.
+        </p>
+
+        <p>
+          From installation and commissioning to maintenance and repairs,
+          our approach is simple: understand your needs, provide the right
+          technical solution and deliver it with care.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VALUES -->
+
+  <section class="values">
+    <div class="wrap values-grid">
+
+      <div class="value">
+        <div class="value-number">01 / EXPERIENCE</div>
+        <h3>Practical engineering</h3>
+        <p>
+          Solutions shaped around the actual requirements of each site,
+          system and client.
+        </p>
+      </div>
+
+      <div class="value">
+        <div class="value-number">02 / QUALITY</div>
+        <h3>Careful workmanship</h3>
+        <p>
+          Professional installation, maintenance and repair with attention
+          to performance and reliability.
+        </p>
+      </div>
+
+      <div class="value">
+        <div class="value-number">03 / SUPPORT</div>
+        <h3>Responsive service</h3>
+        <p>
+          Support that continues from project planning through completion,
+          maintenance and repairs.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CAPABILITIES -->
+
+  <section class="section">
+    <div class="wrap">
+
+      <div class="capabilities-head">
+        <div>
+          <div class="section-label">WHAT WE DELIVER</div>
+          <h2>One team. Multiple technical disciplines.</h2>
+        </div>
+
+        <p>
+          Our services cover the essential systems that keep homes,
+          businesses and industrial facilities operating efficiently.
+        </p>
+      </div>
+
+      <div class="capabilities">
+
+        <article class="capability">
+          <div class="capability-number">01</div>
+          <h3>Electrical &amp; power systems</h3>
+          <p>
+            Design, installation, maintenance, power distribution,
+            control panels and fault finding.
+          </p>
+          <span class="arrow">↗</span>
+        </article>
+
+        <article class="capability">
+          <div class="capability-number">02</div>
+          <h3>HVAC &amp; refrigeration</h3>
+          <p>
+            Air conditioning, cold rooms, refrigeration and commercial
+            HVAC systems.
+          </p>
+          <span class="arrow">↗</span>
+        </article>
+
+        <article class="capability">
+          <div class="capability-number">03</div>
+          <h3>Solar &amp; backup power</h3>
+          <p>
+            Solar systems, inverters, batteries, generators and hybrid
+            energy solutions.
+          </p>
+          <span class="arrow">↗</span>
+        </article>
+
+        <article class="capability">
+          <div class="capability-number">04</div>
+          <h3>Automation &amp; controls</h3>
+          <p>
+            PLC, HMI, SCADA, control panels and industrial automation
+            support.
+          </p>
+          <span class="arrow">↗</span>
+        </article>
+
+        <article class="capability">
+          <div class="capability-number">05</div>
+          <h3>Laundry &amp; appliances</h3>
+          <p>
+            Supply, installation, servicing and repair of commercial and
+            domestic equipment.
+          </p>
+          <span class="arrow">↗</span>
+        </article>
+
+        <article class="capability">
+          <div class="capability-number">06</div>
+          <h3>Technical support</h3>
+          <p>
+            Maintenance, repairs, commissioning and dependable after-sales
+            support.
+          </p>
+          <span class="arrow">↗</span>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+
+  <section class="statement">
+    <div class="wrap">
+      <div class="statement-inner">
+
+        <div class="section-label">THE MELTECH STANDARD</div>
+
+        <h2>
+          Built for <span>reliability.</span>
+          Designed for performance.
+          Delivered with care.
+        </h2>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+    <div class="wrap">
+
+      <div class="cta-box">
+
+        <div>
+          <h2>Have a project in mind?</h2>
+          <p>
+            Tell us what you need and our team can help you identify the
+            right technical solution.
+          </p>
+        </div>
+
+        <a href="index.html#quote" class="button">
+          Request a Quote ↗
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand">
+          <img src="assets/meltech-official.webp" alt="MELTECH">
+          <strong>MELTECH</strong>
+        </div>
+
+        <p class="footer-text">
+          MELTECH Electricals and Refrigeration Services provides
+          professional electrical, HVAC, refrigeration, clean energy,
+          automation and laundry solutions across Kenya.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-title">QUICK LINKS</div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About MELTECH</a>
+          <a href="index.html#solutions">Solutions</a>
+          <a href="index.html#support">Support Center</a>
+          <a href="index.html#quote">Request a Quote</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-title">CONTACT</div>
+
+        <div class="footer-contact">
+          Eldoret, Kenya<br>
+          +254 707 494 395<br>
+          meltechelectricals@gmail.com
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 MELTECH Electricals and Refrigeration Services</span>
+      <span>Built for reliability. Designed for performance.</span>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
+```
+
+
+
