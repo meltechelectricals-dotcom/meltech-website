@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -873,9 +873,171 @@
   <div class="wrap quote-grid"><div class="quote-copy"><div class="kicker">QUOTATION REQUEST</div><h2>Tell us what you need.</h2><p>Share a few details and we’ll prepare a WhatsApp message for the Meltech team. Check it, add anything else you need, then tap Send in WhatsApp.</p><div class="quote-points"><span><b>✓</b> No account needed</span><span><b>✓</b> Message goes straight to Meltech</span><span><b>✓</b> You review it before sending</span></div></div><form class="quote-form" id="quote-form"><div class="field-row"><label>Your name<input name="name" autocomplete="name" required placeholder="e.g. Alex Kiptoo"></label><label>Phone number <small>(optional)</small><input name="phone" type="tel" autocomplete="tel" placeholder="e.g. 07xx xxx xxx"></label></div><div class="field-row"><label>Service needed<select name="service" required><option value="" disabled selected>Select a service</option><option>HVAC / air conditioning</option><option>Refrigeration / cold room</option><option>Electrical design or installation</option><option>Solar / backup power</option><option>Industrial automation / controls</option><option>Laundry machine sales or repair</option><option>Maintenance or general enquiry</option></select></label><label>Project location<input name="location" autocomplete="address-level2" required placeholder="Town or area"></label></div><label>What do you need help with?<textarea name="details" rows="4" required placeholder="Tell us about the system, issue or project. Include useful details such as equipment type or preferred timing."></textarea></label><button class="button button-gold quote-submit" type="submit">Continue to WhatsApp <span>↗</span></button><p class="form-note">This form opens WhatsApp with your details in a draft message. It does not send anything until you press Send in WhatsApp.</p></form></div></section>
 <section class="contact" id="contact"><div class="wrap contact-box"><div class="contact-content"><div class="eyebrow">YOUR NEXT PROJECT STARTS HERE</div><h2>Let's power what matters.</h2><p>Call Meltech for dependable electrical, HVAC, energy and refrigeration service.</p></div><div class="contact-actions"><a class="button button-gold" href="#quote">Request a quote ↗</a><a class="button button-outline" href="tel:+254707494395">Call 0707 494 395</a></div></div></section>
 </main>
-<footer class="footer"><div class="wrap"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#home"><img src="assets/meltech-official.webp" alt=""><span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span></a><p>Powering comfort and delivering reliable electrical, HVAC, clean energy, refrigeration and laundry solutions.</p></div><div><div class="footer-title">EXPLORE</div><div class="footer-links"><a href="#solutions">Our solutions</a><a href="#about">About Meltech</a><a href="#process">How we work</a></div></div><div><div class="footer-title">SOLUTIONS</div><div class="footer-links"><a href="#solutions">HVAC &amp; refrigeration</a><a href="#solutions">Clean energy</a><a href="#solutions">Electrical &amp; automation</a><a href="#solutions">Laundry systems</a></div></div><div><div class="footer-title">CONTACT</div><div class="footer-links"><a href="tel:+254707494395">+254 707 494 395</a><a href="mailto:Meltechelectricals@gmail.com">Meltechelectricals@gmail.com</a><span>Eldoret, Kenya</span><span>Mon–Sat · 8:00 AM–6:00 PM</span></div></div></div><div class="footend"><span>© 2026 Meltech Electrical &amp; Refrigeration Services</span><span>Powering comfort. Delivering reliability.</span></div></div></footer>
+<footer class="footer"><div class="wrap"><div class="footer-grid"><div class="footer-brand"><a class="brand" href="#home"><img src="assets/meltech-official.webp" alt=""><span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span></a><p>Powering comfort and delivering reliable electrical, HVAC, clean energy, refrigeration and laundry solutions.</p></div><div><div class="footer-title">EXPLORE</div><div class="footer-links"><a href="#solutions">Our solutions</a><a href="#about">About Meltech</a><a href="#process">How we work</a></div></div><div><div class="footer-title">SOLUTIONS</div><div class="footer-links"><a href="#solutions">HVAC &amp; refrigeration</a><a href="#solutions">Clean energy</a><a href="#solutions">Electrical &amp; automation</a><a href="#solutions">Laundry systems</a></div></div><div><div class="footer-title">CONTACT</div><div class="footer-links"><a href="tel:+254707494395">+254 707 494 395</a><a href="mailto:Meltechelectricals@gmail.com">Meltechelectricals@gmail.com</a><span>Eldoret, Kenya</span><span>Mon–Sat · 8:00 AM–6:00 PM</span></div></div></div><div class="footend"><span>© 2026 Meltech Electrical &amp; Refrigeration Services</span><span><a href="privacy-policy.html">Privacy Policy</a> · <a href="cookie-policy.html">Cookie Policy</a></span><span>Powering comfort. Delivering reliability.</span></div></div></footer>
+
 <a class="mobile-call" href="tel:+254707494395">☎ &nbsp; Call Meltech · +254 707 494 395</a>
 <script>const menu=document.querySelector('.menu'),nav=document.querySelector('.nav-links');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));document.querySelector('#quote-form').addEventListener('submit',event=>{event.preventDefault();const form=new FormData(event.currentTarget);const lines=['Hello Meltech, I would like to request a quotation.','',`Name: ${form.get('name')}`,`Phone: ${form.get('phone')||'Not provided'}`,`Service: ${form.get('service')}`,`Location: ${form.get('location')}`,'',`Project details: ${form.get('details')}`];const url='https://wa.me/254707494395?text='+encodeURIComponent(lines.join('\n'));window.open(url,'_blank','noopener,noreferrer')});</script>
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav-links');
+
+if (menu && nav) {
+  menu.addEventListener('click', function () {
+    const open = nav.classList.toggle('open');
+
+    menu.setAttribute('aria-expanded', String(open));
+    menu.textContent = open ? '×' : '☰';
+  });
+
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      nav.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.textContent = '☰';
+    });
+  });
+}
+
+
+/* =========================================================
+   MELTECH QUOTATION REQUEST
+   ========================================================= */
+
+const quoteForm = document.querySelector('#quote-form');
+
+if (quoteForm) {
+  quoteForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = new FormData(event.currentTarget);
+
+    const lines = [
+      'Hello Meltech, I would like to request a quotation.',
+      '',
+      'Name: ' + form.get('name'),
+      'Phone: ' + (form.get('phone') || 'Not provided'),
+      'Service: ' + form.get('service'),
+      'Location: ' + form.get('location'),
+      '',
+      'Project details:',
+      form.get('details')
+    ];
+
+    const url =
+      'https://wa.me/254707494395?text=' +
+      encodeURIComponent(lines.join('\n'));
+
+    window.open(url, '_blank', 'noopener,noreferrer');
+  });
+}
+
+
+/* =========================================================
+   MELTECH SUPPORT REQUEST
+   ========================================================= */
+
+const supportForm = document.querySelector('#support-request-form');
+
+if (supportForm) {
+  supportForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = new FormData(event.currentTarget);
+
+    const ticketNumber =
+      'MEL-SUP-' +
+      Math.floor(100000 + Math.random() * 900000);
+
+    const lines = [
+      'Hello Meltech, I would like to submit a technical support request.',
+      '',
+      'Support Ticket: ' + ticketNumber,
+      'Name: ' + form.get('name'),
+      'Phone / WhatsApp: ' + form.get('phone'),
+      'Email: ' + (form.get('email') || 'Not provided'),
+      'Location: ' + form.get('location'),
+      'Service: ' + form.get('category'),
+      'Priority: ' + form.get('priority'),
+      'Equipment / System: ' +
+        (form.get('equipment') || 'Not provided'),
+      'Model / Serial: ' +
+        (form.get('model') || 'Not provided'),
+      '',
+      'Problem description:',
+      form.get('problem'),
+      '',
+      'Preferred contact: ' + form.get('contact_method')
+    ];
+
+    const whatsappUrl =
+      'https://wa.me/254707494395?text=' +
+      encodeURIComponent(lines.join('\n'));
+
+    alert(
+      'Your support request has been prepared.\n\n' +
+      'Ticket Number: ' + ticketNumber +
+      '\n\nWhatsApp will now open so you can review and send the request.'
+    );
+
+    window.open(
+      whatsappUrl,
+      '_blank',
+      'noopener,noreferrer'
+    );
+  });
+}
+
+
+/* =========================================================
+   MELTECH CAREERS APPLICATION
+   ========================================================= */
+
+const careerForm = document.querySelector('#career-form');
+
+if (careerForm) {
+  careerForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = new FormData(event.currentTarget);
+
+    const applicationNumber =
+      'MEL-JOB-' +
+      Math.floor(100000 + Math.random() * 900000);
+
+    const lines = [
+      'Hello Meltech, I would like to submit a job application.',
+      '',
+      'Application Reference: ' + applicationNumber,
+      'Full Name: ' + form.get('applicant_name'),
+      'Phone: ' + form.get('applicant_phone'),
+      'Email: ' +
+        (form.get('applicant_email') || 'Not provided'),
+      'Position / Area of Interest: ' +
+        form.get('position'),
+      '',
+      'Experience / Introduction:',
+      form.get('experience'),
+      '',
+      'I will attach my CV/document to this WhatsApp conversation.'
+    ];
+
+    const whatsappUrl =
+      'https://wa.me/254707494395?text=' +
+      encodeURIComponent(lines.join('\n'));
+
+    alert(
+      'Your application has been prepared.\n\n' +
+      'Application Reference: ' + applicationNumber +
+      '\n\nWhatsApp will now open. Please attach your CV before sending.'
+    );
+
+    window.open(
+      whatsappUrl,
+      '_blank',
+      'noopener,noreferrer'
+    );
+  });
+}
 </script>
 </body>
 </html>
+
