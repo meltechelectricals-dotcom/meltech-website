@@ -28,7 +28,7 @@
 .support-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 15px;
 }
 
 .support-card {
@@ -329,6 +329,122 @@
 /* =========================================================
    MOBILE
    ========================================================= */
+
+
+/* Shared Support Center lower panel */
+.support-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  margin-top: 55px;
+  padding: 40px;
+  background: #0c0d0b;
+  border: 1px solid #a87b20;
+  border-radius: 5px;
+  align-items: stretch;
+}
+
+.support-bottom-grid .support-form-wrap {
+  display: block;
+  grid-template-columns: none;
+  gap: 0;
+  margin-top: 0;
+  padding: 0 40px 0 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.support-bottom-grid .support-form-copy h2 {
+  font: 700 clamp(30px, 4vw, 45px)/1.08 var(--serif);
+  letter-spacing: -.06em;
+  margin: 12px 0 15px;
+}
+
+.support-bottom-grid .support-form-copy p {
+  color: #aaa9a1;
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 390px;
+}
+
+.support-bottom-grid .how-we-work {
+  padding: 0 0 0 40px;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid #a87b20;
+  border-radius: 0;
+  color: #fff;
+}
+
+.support-bottom-grid .how-we-work .section-head {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.support-bottom-grid .how-we-work .section-head h2 {
+  color: #fff;
+}
+
+.support-bottom-grid .how-we-work .section-intro {
+  color: #aaa9a1;
+  margin-top: 14px;
+}
+
+.support-bottom-grid .steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 0;
+  margin-top: 20px;
+}
+
+.support-bottom-grid .step {
+  padding: 20px 0;
+  border-top: 1px solid #393126;
+}
+
+.support-bottom-grid .step:first-child {
+  border-top: 0;
+}
+
+.support-bottom-grid .step:before {
+  display: none;
+}
+
+.support-bottom-grid .step small {
+  color: var(--gold2);
+}
+
+.support-bottom-grid .step h3 {
+  color: #fff;
+}
+
+.support-bottom-grid .step p {
+  color: #aaa9a1;
+}
+
+@media(max-width:650px) {
+  .support-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 35px;
+    padding: 25px 20px;
+  }
+
+  .support-bottom-grid .support-form-wrap {
+    padding: 0 0 35px;
+    border-bottom: 1px solid #a87b20;
+  }
+
+  .support-bottom-grid .how-we-work {
+    padding: 0;
+    border-left: 0;
+  }
+
+  .support-bottom-grid .steps {
+    margin-top: 20px;
+  }
+}
 
 @media(max-width:650px) {
   .support-grid {
@@ -644,7 +760,7 @@
 
     </div>
 
-    <div class="support-form-wrap" id="support-form">
+    <div class="support-bottom-grid"><div class="support-form-wrap" id="support-form">
       <div class="support-form-copy">
         <div class="kicker">TECHNICAL ASSISTANCE</div>
         <h2>Submit a support request.</h2>
@@ -758,9 +874,21 @@
       </form>
     </div>
   </div>
+<div class="how-we-work">
+  <div class="section-head">
+    <div>
+      <div class="kicker">HOW WE WORK</div>
+      <h2>Clear steps. Solid results.</h2>
+    </div>
+    <p class="section-intro">Getting support should be easy. Tell us what you need and we will help you work out the right next step.</p>
+  </div>
+  <div class="steps">
+    <article class="step"><small>01 &middot; START A CONVERSATION</small><h3>Tell us what you need</h3><p>Call or email with your project, repair or maintenance question and your location.</p></article>
+    <article class="step"><small>02 &middot; FIND THE RIGHT FIT</small><h3>We assess &amp; advise</h3><p>We discuss your requirements and explain a practical plan for your system.</p></article>
+    <article class="step"><small>03 &middot; GET IT DONE</small><h3>We install or repair</h3><p>Our team completes the work with care and checks the equipment before handover.</p></article>
+  </div>
+</div></div>
 </section>
-
-<section class="section" id="process"><div class="wrap"><div class="section-head"><div><div class="kicker">HOW WE WORK</div><h2>Clear steps. Solid results.</h2></div><p class="section-intro">Getting support should be easy. Tell us what you need and we’ll help you work out the right next step.</p></div><div class="steps"><article class="step"><small>01 · START A CONVERSATION</small><h3>Tell us what you need</h3><p>Call or email with your project, repair or maintenance question and your location.</p></article><article class="step"><small>02 · FIND THE RIGHT FIT</small><h3>We assess &amp; advise</h3><p>We discuss your requirements and explain a practical plan for your system.</p></article><article class="step"><small>03 · GET IT DONE</small><h3>We install or repair</h3><p>Our team completes the work with care and checks the equipment before handover.</p></article></div></div></section>
 
 <section class="section careers-section" id="careers">
 
