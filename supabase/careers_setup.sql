@@ -58,15 +58,23 @@ alter table public.career_admins enable row level security;
 
 -- Remove any legacy policies on this table first: permissive policies are OR-combined,
 -- so an older public-read policy must not remain alongside the admin-only policy.
-do $$
-declare p record;
-begin
-  for p in select policyname from pg_policies
-    where schemaname = 'public' and tablename = 'applications'
-  loop
-    execute format('drop policy if exists %I on public.applications', p.policyname);
-  end loop;
-end $$;
+DO $$
+DECLARE
+  p record;
+BEGIN
+  FOR p IN
+    SELECT policyname
+    FROM pg_policies
+    WHERE schemaname = 'public'
+      AND tablename = 'applications'
+  LOOP
+    EXECUTE format(
+      'DROP POLICY IF EXISTS %I ON public.applications',
+      p.policyname
+    );
+  END LOOP;
+END;
+$$;
 
 drop policy if exists "Public can submit career applications" on public.applications;
 create policy "Public can submit career applications"
@@ -90,17 +98,27 @@ create policy "Career admins can update applications"
 on public.applications for update to authenticated
 using (exists (select 1 from public.career_admins a where a.user_id = auth.uid()))
 with check (exists (select 1 from public.career_admins a where a.user_id = auth.uid()));
-
-drop policy if exists "Admins can read own admin record" on public.career_admins;
-create policy "Admins can read own admin record"
-on public.career_admins for select to authenticated using (user_id = auth.uid());
-
-insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
-values ('application-cvs', 'application-cvs', false, 5242880,
-  array['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
-on conflict (id) do update set public = false, file_size_limit = 5242880,
-  allowed_mime_types = excluded.allowed_mime_types;
-
+DO $$
+DECLARE
+  p record;
+BEGIN
+  FOR p IN
+    SELECT policyname
+    FROM pg_policies
+    WHERE schemaname = 'storage'
+      AND tablename = 'objects'
+      AND (
+        COALESCE(qual, '') ILIKE '%application-cvs%'
+        OR COALESCE(with_check, '') ILIKE '%application-cvs%'
+      )
+  LOOP
+    EXECUTE format(
+      'DROP POLICY IF EXISTS %I ON storage.objects',
+      p.policyname
+    );
+  END LOOP;
+END;
+$$;
 -- Remove old policies specifically tied to this private CV bucket, without affecting other buckets.
 do $$
 declare p record;
