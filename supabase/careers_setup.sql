@@ -26,6 +26,11 @@ create table if not exists public.applications (
   updated_at timestamptz not null default now()
 );
 
+alter table public.applications add column if not exists application_type text;
+alter table public.applications add column if not exists full_name text;
+alter table public.applications add column if not exists phone text;
+alter table public.applications add column if not exists email text;
+alter table public.applications add column if not exists location text;
 alter table public.applications add column if not exists position_applied text;
 alter table public.applications add column if not exists institution text;
 alter table public.applications add column if not exists course text;
@@ -50,6 +55,18 @@ create table if not exists public.career_admins (
 
 alter table public.applications enable row level security;
 alter table public.career_admins enable row level security;
+
+-- Remove any legacy policies on this table first: permissive policies are OR-combined,
+-- so an older public-read policy must not remain alongside the admin-only policy.
+do $
+declare p record;
+begin
+  for p in select policyname from pg_policies
+    where schemaname = 'public' and tablename = 'applications'
+  loop
+    execute format('drop policy if exists %I on public.applications', p.policyname);
+  end loop;
+end $;
 
 drop policy if exists "Public can submit career applications" on public.applications;
 create policy "Public can submit career applications"
@@ -83,6 +100,18 @@ values ('application-cvs', 'application-cvs', false, 5242880,
   array['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
 on conflict (id) do update set public = false, file_size_limit = 5242880,
   allowed_mime_types = excluded.allowed_mime_types;
+
+-- Remove old policies specifically tied to this private CV bucket, without affecting other buckets.
+do $
+declare p record;
+begin
+  for p in select policyname from pg_policies
+    where schemaname = 'storage' and tablename = 'objects'
+      and (coalesce(qual,'') ilike '%application-cvs%' or coalesce(with_check,'') ilike '%application-cvs%')
+  loop
+    execute format('drop policy if exists %I on storage.objects', p.policyname);
+  end loop;
+end $;
 
 drop policy if exists "Applicants can upload CVs" on storage.objects;
 create policy "Applicants can upload CVs"
