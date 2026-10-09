@@ -40,10 +40,11 @@
     }
 
     body{
-      font-family:"DM Sans", Inter, Arial, sans-serif;
+      font-family:var(--sans);
       background:var(--black);
       color:var(--white);
       line-height:1.6;
+      -webkit-font-smoothing:antialiased;
     }
 
     a{
@@ -609,7 +610,7 @@
 
       .hero-grid{grid-template-columns:1fr;min-height:0;gap:8px;padding-top:58px;padding-bottom:55px}
       .hero-content{padding:0}
-      .hero h1{font-size:43px;line-height:1.02}
+      .hero h1{font-size:49px;line-height:.99;max-width:430px}
       .hero-media{height:310px;margin-top:12px}
       .hero-photo{height:275px;mask-image:linear-gradient(90deg,transparent 0%,#000 7%,#000 100%)}
       .photo-tag{left:0;bottom:12px}
