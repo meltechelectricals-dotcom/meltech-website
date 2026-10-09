@@ -1,25 +1,667 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080908"><meta name="description" content="Maintenance tips and technical guidance from MELTECH Electricals and Refrigeration Services in Eldoret, Kenya."><link rel="canonical" href="https://meltechelecandrefrigeration.co.ke/blog.html"><link rel="icon" href="assets/meltech-favicon.ico" sizes="any"><title>Blog | MELTECH Electricals and Refrigeration Services</title><style>
-:root{--black:#080908;--gold:#e8aa29;--gold2:#f6cf69;--paper:#f4f3ef;--ink:#171814;--muted:#77766f;--line:#dedbd2;--sans:Inter,"Segoe UI",Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
-.top{background:#050605;color:#c9c4b9;font-size:12px;letter-spacing:.03em}.top .wrap{min-height:36px;display:flex;justify-content:space-between;align-items:center;gap:16px}.top a:hover{color:var(--gold2)}
-header{position:sticky;top:0;z-index:20;background:rgba(8,9,8,.97);border-bottom:1px solid rgba(232,170,41,.34);backdrop-filter:blur(12px);color:#fff}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;min-width:250px}.brand img{width:54px;height:54px;object-fit:contain;filter:drop-shadow(0 3px 8px #d49a2a55)}.brand-text{font-weight:850;font-size:21px;line-height:1;color:var(--gold2);letter-spacing:.06em}.brand-text small{display:block;margin-top:6px;color:#f5f2e9;font-size:9px;line-height:1.35;letter-spacing:.12em}.nav-links{display:flex;align-items:center;gap:20px;font-size:13px;color:#e2ded5}.nav-links a:hover,.nav-links a[aria-current=page]{color:var(--gold2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 17px;border:1px solid var(--gold);font-weight:750;font-size:13px}.nav-cta,.btn.gold{background:var(--gold);color:#14120b}.btn.outline{border-color:#8d8980;color:#fff}.btn:hover,.nav-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}.menu{display:none;background:transparent;color:#fff;border:1px solid #5c574a;border-radius:4px;padding:8px 11px;font-size:21px}
-.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 85% 25%,#6c4b1638,transparent 42%),linear-gradient(120deg,#080908,#171813 70%,#242017);color:#fff;padding:76px 0 70px;border-bottom:3px solid var(--gold)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:54px}.eyebrow,.kicker{font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:#b98217}.hero .eyebrow{color:var(--gold2)}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(38px,5vw,62px);line-height:1.05;letter-spacing:-.045em;margin:18px 0 22px}h1 em{font-style:normal;color:var(--gold2)}.lead{font-size:18px;line-height:1.8;color:#d4d1c9;max-width:650px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-visual{min-height:300px;border:1px solid #e8aa2955;background:#141510;padding:12px;position:relative}.hero-visual img{width:100%;height:300px;object-fit:cover}.visual-caption{position:absolute;bottom:24px;left:24px;right:24px;background:#080908df;color:#f6cf69;padding:12px 15px;font-size:11px;font-weight:800;letter-spacing:.1em}
-.section{padding:72px 0}.section-head{max-width:780px;margin-bottom:30px}.section h2{font-size:clamp(29px,3.4vw,43px);line-height:1.13;letter-spacing:-.035em;margin:12px 0 18px}.section p{color:#5d5d56}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);transition:transform .2s,box-shadow .2s}.card:hover{transform:translateY(-4px);box-shadow:0 15px 34px #0000000d}.card img{width:100%;height:205px;object-fit:cover}.card-body{padding:23px}.card h3{font-size:19px;margin:0 0 9px}.card p{font-size:14px;margin-bottom:15px}.text-link{color:#825607;font-size:13px;font-weight:800}.text-link:hover{color:#bd8416}.dark-band{background:#11120f;color:#fff;padding:66px 0}.dark-band h2{font-size:clamp(28px,3.3vw,42px);line-height:1.15;max-width:760px}.dark-band p{color:#c9c7bf;max-width:780px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.feature{border:1px solid #ffffff20;background:#191a16;padding:23px}.feature .num{color:var(--gold2);font-size:11px;letter-spacing:.14em;font-weight:800}.feature h3{font-size:18px;margin:12px 0 8px}.feature p{font-size:14px;margin:0}.cta{background:linear-gradient(110deg,#171812,#080908);color:#fff;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-left:4px solid var(--gold)}.cta h2{font-size:clamp(25px,3vw,36px);margin-bottom:8px}.cta p{color:#d1cec5;margin:0}
-footer{background:#050605;color:#e8e4dc;padding:42px 0 22px;border-top:1px solid #e8aa2955}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}.footer-title{font-size:11px;letter-spacing:.15em;color:var(--gold2);font-weight:800;margin-bottom:14px}.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:12px}.footer-brand img{width:48px;height:48px;object-fit:contain}.footer-brand strong{color:var(--gold2);letter-spacing:.08em}.footer-grid p,.footer-grid a,.footer-grid span{font-size:13px;color:#c9c5bc}.footer-links{display:grid;gap:9px}.footer-grid a:hover{color:var(--gold2)}.footer-bottom{display:flex;justify-content:space-between;gap:16px;border-top:1px solid #ffffff20;margin-top:30px;padding-top:18px;font-size:11px;color:#aaa69d}
-@media(max-width:1000px){.nav-links{gap:12px}.nav-cta{display:none}.nav{gap:14px}.brand{min-width:215px}}@media(max-width:850px){.nav-links{display:none;position:absolute;left:0;right:0;top:100%;background:#080908;padding:20px 24px 26px;border-bottom:1px solid #e8aa2955;flex-direction:column;align-items:stretch;gap:18px}.nav-links.open{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr;gap:30px}.hero{padding:54px 0}.hero-visual img{height:260px}.cards,.features{grid-template-columns:1fr 1fr}.cta{padding:28px;align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}}@media(max-width:520px){.wrap{width:min(100% - 32px,1160px)}.top .wrap{font-size:10px}.brand{min-width:0}.brand img{width:45px;height:45px}.brand-text{font-size:17px}.brand-text small{font-size:8px}.cards,.features,.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.section{padding:52px 0}.hero-visual img{height:220px}.footer-bottom{flex-direction:column}}
-</style></head>
-<body><div class="top"><div class="wrap"><span>Eldoret, Kenya · Mon – Sat · 8:00 AM – 6:00 PM</span><a href="tel:+254707494395">+254 707 494 395</a></div></div>
-<header><nav class="wrap nav" aria-label="Main navigation"><a class="brand" href="index.html" aria-label="MELTECH home"><img src="assets/meltech-official.webp" alt="MELTECH official snowflake and lightning logo"><span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span></a>
-<div class="nav-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html" >Services</a><a href="solutions.html" >Solutions</a><a href="blog.html" aria-current="page">Blog</a><a href="contact.html" >Contact</a></div><a class="nav-cta" href="contact.html#enquiry">Request a Quote</a><button class="menu" type="button" aria-label="Open menu" aria-expanded="false">☰</button></nav></header>
-<main><section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">MELTECH INSIGHTS</div><h1>Knowledge that helps.<br><em>Systems that last.</em></h1><p class="lead">Read practical guidance on HVAC maintenance, refrigeration, electrical safety, backup power, laundry equipment and automation.</p><div class="hero-actions"><a class="btn gold" href="contact.html#enquiry">Request a Quote ↗</a><a class="btn outline" href="tel:+254707494395">Call MELTECH</a></div></div><div class="hero-visual"><img src="assets/commercial-chiller.webp" alt="TECHNICAL NOTES · MAINTENANCE · ADVICE"><div class="visual-caption">TECHNICAL NOTES · MAINTENANCE · ADVICE</div></div></div></section><section class="section"><div class="wrap"><div class="section-head"><div class="kicker">MELTECH INSIGHTS</div><h2>Practical guidance for equipment owners.</h2><p>Helpful maintenance notes and technical explainers for homes, businesses and facilities teams. Articles below are starter editorial content and can be expanded with your own completed jobs and photographs.</p></div><div class="cards">
-<article class="card"><img src="assets/hvac-equipment.webp" alt="Air conditioning equipment"><div class="card-body"><p class="kicker">HVAC MAINTENANCE</p><h3>Signs your air conditioner needs servicing</h3><p>Weak airflow, unusual sounds, water leaks and inconsistent cooling can indicate a maintenance or diagnostic issue.</p><a class="text-link" href="contact.html#enquiry">Ask for an assessment ↗</a></div></article>
-<article class="card"><img src="assets/commercial-chiller.webp" alt="Commercial refrigeration equipment"><div class="card-body"><p class="kicker">REFRIGERATION</p><h3>Protecting cold-room performance</h3><p>Door seals, airflow, condenser cleanliness and temperature monitoring all contribute to stable refrigeration performance.</p><a class="text-link" href="contact.html#enquiry">Discuss cold-room support ↗</a></div></article>
-<article class="card"><img src="assets/industrial-power-control.webp" alt="Electrical control panel"><div class="card-body"><p class="kicker">ELECTRICAL SAFETY</p><h3>Why recurring electrical trips need attention</h3><p>Repeated breaker trips should be investigated by a qualified technician rather than repeatedly reset without diagnosis.</p><a class="text-link" href="contact.html#enquiry">Request technical support ↗</a></div></article>
-<article class="card"><img src="assets/energy-equipment.webp" alt="Solar and backup power equipment"><div class="card-body"><p class="kicker">BACKUP POWER</p><h3>Planning inverter and battery capacity</h3><p>List the loads, their running power and starting requirements before selecting a backup system.</p><a class="text-link" href="contact.html#enquiry">Discuss your power needs ↗</a></div></article>
-<article class="card"><img src="assets/laundry-equipment.webp" alt="Laundry machine"><div class="card-body"><p class="kicker">LAUNDRY EQUIPMENT</p><h3>When a washing machine will not drain</h3><p>Drain filters, hoses, pumps and control signals may need checking; isolate power before any safe external inspection.</p><a class="text-link" href="contact.html#enquiry">Book an assessment ↗</a></div></article>
-<article class="card"><img src="assets/automation-equipment.webp" alt="Industrial automation controls"><div class="card-body"><p class="kicker">AUTOMATION</p><h3>What equipment details help a faster diagnosis?</h3><p>Share the model, fault code, symptoms and any recent changes so the technician can prepare for the visit.</p><a class="text-link" href="contact.html#enquiry">Contact MELTECH ↗</a></div></article>
-</div></div></section>
-<section class="section" style="padding-top:0"><div class="wrap"><div class="cta"><div><h2>Let's discuss your requirement.</h2><p>Contact MELTECH in Eldoret for a quote or technical support.</p></div><a class="btn gold" href="contact.html#enquiry">Contact our team ↗</a></div></div></section></main>
-<footer><div class="wrap"><div class="footer-grid"><div><div class="footer-brand"><img src="assets/meltech-official.webp" alt=""><strong>MELTECH</strong></div><p>Electricals and Refrigeration Services<br>Powering comfort. Delivering reliability.</p></div><div><div class="footer-title">EXPLORE</div><div class="footer-links"><a href="index.html#solutions">Our solutions</a><a href="about.html">About Meltech</a><a href="services.html">Services</a><a href="blog.html">Blog</a></div></div><div><div class="footer-title">CONTACT</div><div class="footer-links"><a href="tel:+254707494395">+254 707 494 395</a><a href="mailto:sales@meltechelecandrefrigeration.co.ke">sales@meltechelecandrefrigeration.co.ke</a><span>Eldoret, Kenya</span><span>Mon – Sat · 8:00 AM – 6:00 PM</span></div></div></div><div class="footer-bottom"><span>© 2026 MELTECH ELECTRICALS AND REFRIGERATION SERVICES. All rights reserved.</span><span><a href="privacy-policy.html">Privacy Policy</a> · <a href="cookie-policy.html">Cookie Policy</a></span></div></div></footer>
-<script>const menu=document.querySelector('.menu'),nav=document.querySelector('.nav-links');if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}))}</script></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080908">
+  <meta name="description" content="Practical MELTECH insights on HVAC, refrigeration, electrical safety, solar and backup power, laundry equipment and automation in Eldoret, Kenya.">
+  <link rel="canonical" href="https://meltechelecandrefrigeration.co.ke/blog.html">
+  <link rel="icon" href="assets/meltech-favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/meltech-official.webp">
+  <title>MELTECH Insights | Electricals, HVAC &amp; Refrigeration</title>
+<style>
+:root{--black:#080908;--black2:#111210;--gold:#e8aa29;--gold2:#f6cf69;--paper:#f4f3ef;--ink:#121311;--muted:#73736d;--line:#dedbd2;--white:#fff;--serif:Manrope,"Arial",sans-serif;--sans:"DM Sans",Inter,Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.top{background:#050605;color:#c9c4b9;font-size:11px;letter-spacing:.04em}.top .wrap{height:36px;display:flex;justify-content:space-between;align-items:center}.top-links{display:flex;gap:22px}.top a:hover{color:var(--gold2)}header{position:sticky;top:0;z-index:20;background:rgba(8,9,8,.97);border-bottom:1px solid rgba(232,170,41,.34);backdrop-filter:blur(12px);color:white}.nav{height:86px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;min-width:260px}.brand img{width:55px;height:55px;object-fit:contain;border-radius:0;filter:drop-shadow(0 3px 8px #d49a2a55)}.brand-text{font:800 22px/1 var(--serif);letter-spacing:.055em;color:var(--gold2);text-shadow:0 1px 0 #fff0,0 2px 1px #a36a0a,0 4px 7px #000}.brand-text small{display:block;margin-top:6px;color:#f5f2e9;font:600 9px/1.3 var(--sans);letter-spacing:.14em}.nav-links{display:flex;gap:27px;align-items:center;color:#ddd9d0;font-size:12px}.nav-links a:hover{color:var(--gold2)}.button{min-height:45px;padding:0 18px;border:1px solid var(--gold);border-radius:4px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.025em;transition:.2s}.button-gold{background:linear-gradient(135deg,#f6ce67,#dc9b19);color:#0a0a08;border-color:#e9b53f;box-shadow:0 5px 18px #bd810b35}.button-gold:hover{filter:brightness(1.08);transform:translateY(-1px)}.button-outline{color:#fff;border-color:#80704c}.button-outline:hover{border-color:var(--gold);color:var(--gold2)}.menu{display:none;background:none;color:var(--gold2);border:1px solid #725922;border-radius:4px;font-size:21px;width:43px;height:40px}.hero{position:relative;overflow:hidden;background:var(--black);color:#fff}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 75% 40%,#ad761a2b,transparent 44%),linear-gradient(155deg,transparent 82%,#d9981a 82.1%,#f0c044 82.4%,transparent 83.1%);pointer-events:none}.hero-grid{position:relative;min-height:605px;display:grid;grid-template-columns:.91fr 1.09fr;align-items:center;gap:34px;padding-top:48px;padding-bottom:57px}.eyebrow{color:var(--gold2);font-size:10px;letter-spacing:.2em;font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";height:1px;width:26px;background:var(--gold)}h1,h2,h3,p{margin-top:0}.hero h1{font:700 clamp(45px,5.5vw,73px)/.99 var(--serif);letter-spacing:-.065em;margin:22px 0 18px;max-width:600px}.hero h1 em{font-style:normal;color:var(--gold2);background:linear-gradient(180deg,#ffe594,#d99014 80%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy{font-size:15px;line-height:1.8;color:#c9c8c1;max-width:485px}.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:27px}.hero-trust{display:flex;align-items:center;gap:10px;margin-top:28px;color:#aaa89e;font-size:11px}.trust-star{color:var(--gold);font-size:17px}.hero-media{height:455px;position:relative;display:flex;align-items:center;justify-content:center}.hero-photo{width:100%;height:390px;object-fit:cover;object-position:center 43%;border-radius:5px;border:1px solid #cd961e;box-shadow:0 18px 65px #000b;mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 100%)}.photo-tag{position:absolute;left:0;bottom:25px;background:#070807eF;border:1px solid #d99b25;padding:15px 18px;max-width:250px;box-shadow:0 8px 25px #0006}.photo-tag strong{display:block;color:var(--gold2);font:700 14px var(--serif);letter-spacing:.03em}.photo-tag span{display:block;margin-top:5px;color:#d5d2cb;font-size:10px;line-height:1.5}.hero-index{position:absolute;right:0;bottom:25px;font-size:9px;letter-spacing:.16em;color:#99978f}.service-ribbon{position:relative;margin-top:-1px;background:#050605;color:#fff;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);z-index:2}.ribbon-grid{display:grid;grid-template-columns:repeat(5,1fr);padding:15px 0}.ribbon-item{display:flex;justify-content:center;align-items:center;gap:10px;border-right:1px solid #715314;font-size:10px;letter-spacing:.08em;font-weight:700}.ribbon-item:last-child{border:0}.ribbon-icon{font-size:19px;color:var(--gold)}.section{padding:94px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:36px}.kicker{color:#a2720e;font-size:10px;letter-spacing:.19em;font-weight:800}.section h2{font:700 clamp(32px,4vw,48px)/1.08 var(--serif);letter-spacing:-.06em;margin:12px 0 0;max-width:660px}.section-intro{max-width:380px;color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 3px}.solutions{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.solution{position:relative;min-height:365px;overflow:hidden;background:#111;border:1px solid #d2a23d;border-radius:6px;color:#fff}.solution img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform .45s}.solution:hover img{transform:scale(1.035)}.solution:after{content:"";position:absolute;inset:28% 0 0;background:linear-gradient(transparent,#050605ef 85%)}.solution-copy{position:absolute;z-index:1;left:21px;right:20px;bottom:20px}.solution-label{color:var(--gold2);font-size:9px;font-weight:700;letter-spacing:.17em}.solution h3{font:700 22px var(--serif);letter-spacing:-.04em;margin:9px 0 7px}.solution p{color:#dbd9d2;font-size:11px;line-height:1.65;margin:0;max-width:310px}.solution-arrow{position:absolute;right:0;bottom:1px;font-size:20px;color:var(--gold2)}.mini-solutions{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px;margin-top:14px}.mini{display:flex;align-items:center;gap:14px;min-height:106px;padding:12px;background:#fff;border:1px solid #e0d9c9;border-radius:5px}.mini img{width:102px;height:78px;object-fit:cover;border-radius:3px}.mini h3{font:700 13px var(--serif);margin:0 0 5px}.mini p{font-size:10px;line-height:1.55;color:var(--muted);margin:0}.why{background:#0c0d0b;color:white;position:relative;overflow:hidden}.why:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 100% 15%,#d5991c1c,transparent 42%);pointer-events:none}.why .wrap{position:relative}.why .kicker{color:var(--gold2)}.why .section-intro{color:#aaa9a1}.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}.why h2{max-width:500px}.why-copy{color:#c3c2ba;font-size:13px;line-height:1.85;margin-top:18px;max-width:520px}.features{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:27px}.feature{display:flex;gap:11px;padding:13px 12px;border:1px solid #393126;border-radius:4px;background:#12130f}.feature b{color:var(--gold2);font-size:11px;display:block;margin-bottom:4px}.feature span{font-size:10px;line-height:1.55;color:#aaa99f}.feature-icon{color:var(--gold);font-size:17px}.why-image-wrap{position:relative}.why-image{height:405px;width:100%;object-fit:cover;border:1px solid #a87b20;border-radius:5px;box-shadow:0 18px 55px #0008}.image-caption{position:absolute;bottom:13px;left:13px;right:13px;padding:12px 14px;background:#070807e9;border-left:2px solid var(--gold);font-size:10px;letter-spacing:.07em;color:#eee}.about-band{background:#eae8e1}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}.about-collage{height:390px;position:relative}.about-main{position:absolute;left:0;top:0;width:70%;height:335px;object-fit:cover;border:1px solid #d39a21;border-radius:4px}.about-secondary{position:absolute;right:0;bottom:0;width:52%;height:210px;object-fit:cover;border:5px solid var(--paper);box-shadow:0 8px 25px #0003;border-radius:4px}.about-note{position:absolute;left:16px;bottom:12px;background:var(--black);color:white;padding:11px 14px;border-left:2px solid var(--gold);font-size:9px;letter-spacing:.09em}.about-copy p{color:#62635d;font-size:13px;line-height:1.85}.checks{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:13px 8px;margin:25px 0}.checks li{display:flex;align-items:center;gap:8px;font-size:11px}.check{width:19px;height:19px;display:grid;place-items:center;border-radius:50%;background:#171814;color:var(--gold);font-weight:800;font-size:11px}.since{display:inline-flex;align-items:center;gap:12px;background:white;padding:11px 15px;border:1px solid #ded6c4;border-radius:4px}.since strong{font:800 25px var(--serif);color:#a87613}.since span{font-size:10px;line-height:1.45;color:#66655e}.steps{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:34px}.step{padding:24px 25px 0 0;position:relative}.step:before{content:"";position:absolute;top:-5px;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px #f6edda}.step small{font-size:9px;color:#a17113;letter-spacing:.15em;font-weight:800}.step h3{font:700 18px var(--serif);margin:13px 0 7px}.step p{font-size:11px;line-height:1.7;color:var(--muted);max-width:300px}.contact{padding:0 0 88px}.contact-box{background:var(--black);color:#fff;border:1px solid #bb871d;border-radius:5px;padding:48px 50px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;overflow:hidden}.contact-box:after{content:"";position:absolute;right:10%;top:-150px;width:310px;height:310px;border:1px solid #bd8a25;border-radius:50%;box-shadow:0 0 0 28px #d29b1b0c,0 0 0 60px #d29b1b09}.contact-content,.contact-actions{position:relative;z-index:1}.contact-box h2{font:700 clamp(28px,3.5vw,42px)/1.05 var(--serif);letter-spacing:-.06em;margin:11px 0}.contact-box p{color:#c1bfb5;font-size:12px;margin:0}.contact-actions{display:flex;gap:10px;flex-wrap:wrap}.footer{background:#060706;color:#c6c2b8;padding:52px 0 22px;border-top:1px solid #745618}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:35px}.footer-brand p{font-size:11px;line-height:1.8;color:#929188;max-width:265px;margin-top:17px}.footer-title{color:var(--gold2);font-size:9px;letter-spacing:.17em;font-weight:800;margin-bottom:16px}.footer-links{display:flex;flex-direction:column;gap:11px;font-size:11px;color:#c4c0b7}.footer-links a:hover{color:var(--gold2)}.footend{margin-top:39px;padding-top:17px;border-top:1px solid #262720;display:flex;justify-content:space-between;gap:20px;color:#818077;font-size:9px}.mobile-call{display:none}
+@media(max-width:900px){.nav-links{gap:15px}.brand{min-width:210px}.brand-text{font-size:19px}.hero-grid{gap:15px}.hero-media{height:400px}.hero-photo{height:335px}.solution{min-height:320px}.about-grid{gap:37px}.footer-grid{grid-template-columns:1.2fr 1fr 1fr}.footer-grid>div:last-child{grid-column:2/4}}
+@media(max-width:650px){.wrap{width:calc(100% - 34px)}.top .wrap{height:33px;font-size:9px}.top-links{gap:10px}.top-links a:first-child{display:none}.nav{height:72px}.brand{gap:8px;min-width:0}.brand img{width:46px;height:46px}.brand-text{font-size:18px}.brand-text small{font-size:7px}.nav-links{display:none;position:absolute;left:0;right:0;top:72px;padding:19px 22px;background:#090a08;border-bottom:1px solid var(--gold);flex-direction:column;align-items:flex-start;gap:20px}.nav-links.open{display:flex}.nav>.button{display:none}.menu{display:block}.hero-grid{grid-template-columns:1fr;padding-top:52px;padding-bottom:37px;gap:0}.hero h1{font-size:49px;max-width:430px}.hero-copy{font-size:13px}.hero-media{height:305px;margin-top:23px}.hero-photo{height:270px;mask-image:linear-gradient(90deg,#000,#000)}.photo-tag{left:8px;bottom:2px}.hero-index{display:none}.ribbon-grid{grid-template-columns:repeat(3,1fr);padding:7px 0}.ribbon-item{min-height:39px;font-size:8px;gap:6px}.ribbon-item:nth-child(3){border-right:0}.ribbon-item:nth-child(4),.ribbon-item:nth-child(5){display:none}.ribbon-icon{font-size:16px}.section{padding:68px 0}.section-head{display:block;margin-bottom:26px}.section-intro{margin-top:14px}.solutions{grid-template-columns:1fr;gap:9px}.solution{min-height:265px}.solution:first-child{grid-column:1/3;min-height:310px}.solution-copy{left:14px;right:14px;bottom:14px}.solution h3{font-size:17px}.solution p{font-size:10px}.solution-label{font-size:8px}.mini-solutions{grid-template-columns:1fr;margin-top:9px}.mini{min-height:84px}.mini img{width:100px;height:60px}.why-grid{grid-template-columns:1fr;gap:30px}.why-image{height:280px}.features{gap:7px}.feature{padding:10px 8px}.about-grid{grid-template-columns:1fr;gap:30px}.about-collage{height:310px}.about-main{height:260px;width:76%}.about-secondary{height:160px;width:53%}.about-note{font-size:8px}.checks{gap:11px 6px}.checks li{font-size:10px}.steps{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line);margin-left:4px;margin-top:28px}.step{padding:0 0 24px 22px}.step:before{left:-5px;top:0}.step h3{margin:7px 0 5px}.step p{margin:0}.contact{padding-bottom:63px}.contact-box{display:block;padding:31px 23px}.contact-box h2{font-size:34px}.contact-actions{margin-top:23px}.contact-actions .button{flex:1;padding:0 11px}.footer-grid{grid-template-columns:1fr;gap:30px 17px}.footer-grid>div:first-child{grid-column:1/3}.footer-grid>div:last-child{grid-column:auto}.footend{margin-top:30px;flex-wrap:wrap}.mobile-call{display:flex;position:fixed;z-index:15;bottom:12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#f6cf69,#db9718);color:#0a0a08;padding:12px 20px;border:1px solid #f8d572;border-radius:30px;box-shadow:0 7px 25px #0005;font-size:11px;font-weight:800;white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.quote{background:#eae8e1}.quote-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px;align-items:start}.quote-copy{position:sticky;top:125px}.quote-copy h2{font:700 clamp(32px,4vw,48px)/1.08 var(--serif);letter-spacing:-.06em;margin:12px 0}.quote-copy>p{font-size:13px;line-height:1.8;color:#62635d}.quote-points{display:flex;flex-direction:column;gap:13px;margin-top:27px;font-size:11px;color:#4c4d47}.quote-points b{color:#a17113;margin-right:7px}.quote-form{background:#fff;border:1px solid #ded6c4;border-radius:5px;padding:26px;box-shadow:0 12px 30px #3430180a}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.quote-form label{display:flex;flex-direction:column;gap:7px;font-size:10px;letter-spacing:.04em;font-weight:700;color:#363730;margin-bottom:15px}.quote-form label small{font-weight:400;color:#87877e}.quote-form input,.quote-form select,.quote-form textarea{width:100%;border:1px solid #d8d8d0;background:#fafaf8;border-radius:3px;padding:12px 11px;font:400 12px var(--sans);color:#1b1c18;outline:none}.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{border-color:#c8911d;box-shadow:0 0 0 3px #dfa92320}.quote-form textarea{resize:vertical;min-height:100px}.quote-submit{cursor:pointer;min-width:205px}.form-note{font-size:9px!important;line-height:1.6!important;color:#77766e!important;margin:12px 0 0!important}
+@media(max-width:650px){.quote-grid{grid-template-columns:1fr;gap:22px}.quote-copy{position:static}.quote-points{gap:9px;margin-top:17px}.quote-form{padding:18px 15px}.field-row{grid-template-columns:1fr;gap:0}.quote-form label{margin-bottom:13px}.quote-submit{width:100%}}
+/* =========================================================
+   MELTECH SUPPORT CENTER & CAREERS
+   ========================================================= */
+
+.support-section {
+  background: #f4f3ef;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.support-card {
+  background: #fff;
+  border: 1px solid #ded6c4;
+  border-radius: 5px;
+  padding: 0 0 28px;
+  min-height: 420px;
+  overflow: hidden;
+  transition: .2s ease;
+  position: relative;
+}
+
+.support-card:hover {
+  transform: translateY(-3px);
+  border-color: #c89520;
+  box-shadow: 0 12px 30px #34301812;
+}
+
+.support-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: #11120f;
+  color: var(--gold2);
+  font-size: 18px;
+  margin-bottom: 17px;
+}
+
+.support-card h3 {
+  padding: 0 24px;
+  font: 700 18px var(--serif);
+  letter-spacing: -.035em;
+  margin-bottom: 8px;
+}
+
+.support-card p {
+  padding: 0 24px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+  max-width: 290px;
+  margin-bottom: 17px;
+}
+
+.support-card a,
+.job-card a {
+  color: #a17113;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.support-card a:hover,
+.job-card a:hover {
+  color: #c58c17;
+}
+
+.support-form-wrap {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 55px;
+  margin-top: 55px;
+  padding: 40px;
+  background: #0c0d0b;
+  border: 1px solid #a87b20;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.support-form-copy h2 {
+  font: 700 clamp(30px, 4vw, 45px)/1.08 var(--serif);
+  letter-spacing: -.06em;
+  margin: 12px 0 15px;
+}
+
+.support-form-copy p {
+  color: #aaa9a1;
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 390px;
+}
+
+.support-form {
+  background: #fff;
+  color: var(--ink);
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.support-form label,
+.application-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 10px;
+  letter-spacing: .04em;
+  font-weight: 700;
+  color: #363730;
+  margin-bottom: 15px;
+}
+
+.support-form label small,
+.application-form label small {
+  font-weight: 400;
+  color: #87877e;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea,
+.application-form input,
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  border: 1px solid #d8d8d0;
+  background: #fafaf8;
+  border-radius: 3px;
+  padding: 12px 11px;
+  font: 400 12px var(--sans);
+  color: #1b1c18;
+  outline: none;
+}
+
+.support-form input:focus,
+.support-form select:focus,
+.support-form textarea:focus,
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+  border-color: #c8911d;
+  box-shadow: 0 0 0 3px #dfa92320;
+}
+
+.support-form textarea,
+.application-form textarea {
+  resize: vertical;
+}
+
+.support-consent {
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 9px !important;
+  margin-top: 4px;
+}
+
+.support-consent input {
+  width: 16px !important;
+  height: 16px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.support-consent span {
+  font-size: 9px;
+  line-height: 1.55;
+  color: #66655e;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.support-submit {
+  margin-top: 3px;
+}
+
+/* =========================================================
+   CAREERS
+   ========================================================= */
+
+.careers-section {
+  background: #eae8e1;
+}
+
+.career-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background: #0c0d0b;
+  color: #fff;
+  border: 1px solid #a87b20;
+  border-radius: 5px;
+  padding: 30px 32px;
+  margin-bottom: 18px;
+}
+
+.career-label,
+.job-status {
+  color: var(--gold2);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.career-banner h3 {
+  font: 700 24px var(--serif);
+  letter-spacing: -.04em;
+  margin: 9px 0 7px;
+}
+
+.career-banner p {
+  color: #aaa9a1;
+  font-size: 11px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.job-card {
+  background: #fff;
+  border: 1px solid #ded6c4;
+  border-radius: 5px;
+  padding: 27px;
+}
+
+.job-card h3 {
+  font: 700 22px var(--serif);
+  letter-spacing: -.04em;
+  margin: 10px 0 9px;
+}
+
+.job-card p {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  max-width: 450px;
+}
+
+.job-meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  border-top: 1px solid #ebe7dd;
+  margin-top: 20px;
+  padding-top: 15px;
+  margin-bottom: 17px;
+  color: #77766e;
+  font-size: 9px;
+}
+
+.application-wrap {
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 55px;
+  margin-top: 45px;
+  align-items: start;
+}
+
+.application-wrap > div:first-child {
+  position: sticky;
+  top: 125px;
+}
+
+.application-wrap h2 {
+  font: 700 clamp(30px, 4vw, 45px)/1.08 var(--serif);
+  letter-spacing: -.06em;
+  margin: 12px 0;
+}
+
+.application-wrap > div:first-child p {
+  color: #62635d;
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 390px;
+}
+
+.application-form {
+  background: #fff;
+  border: 1px solid #ded6c4;
+  border-radius: 5px;
+  padding: 26px;
+}
+
+.application-form input[type="file"] {
+  padding: 9px;
+}
+
+.file-note {
+  display: block;
+  margin-top: 2px;
+  font-size: 9px;
+  color: #77766e;
+  line-height: 1.5;
+}
+
+.application-form .button {
+  margin-top: 4px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+
+/* Shared Support Center lower panel */
+.support-bottom-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  margin-top: 55px;
+  padding: 40px;
+  background: #0c0d0b;
+  border: 1px solid #a87b20;
+  border-radius: 5px;
+  align-items: stretch;
+}
+
+.support-bottom-grid .support-form-wrap {
+  display: block;
+  grid-template-columns: none;
+  gap: 0;
+  margin-top: 0;
+  padding: 0 40px 0 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.support-bottom-grid .support-form-copy h2 {
+  font: 700 clamp(30px, 4vw, 45px)/1.08 var(--serif);
+  letter-spacing: -.06em;
+  margin: 12px 0 15px;
+}
+
+.support-bottom-grid .support-form-copy p {
+  color: #aaa9a1;
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 390px;
+}
+
+.support-bottom-grid .how-we-work {
+  padding: 0 0 0 40px;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid #a87b20;
+  border-radius: 0;
+  color: #fff;
+}
+
+.support-bottom-grid .how-we-work .section-head {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.support-bottom-grid .how-we-work .section-head h2 {
+  color: #fff;
+}
+
+.support-bottom-grid .how-we-work .section-intro {
+  color: #aaa9a1;
+  margin-top: 14px;
+}
+
+.support-bottom-grid .steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 0;
+  margin-top: 20px;
+}
+
+.support-bottom-grid .step {
+  padding: 20px 0;
+  border-top: 1px solid #393126;
+}
+
+.support-bottom-grid .step:first-child {
+  border-top: 0;
+}
+
+.support-bottom-grid .step:before {
+  display: none;
+}
+
+.support-bottom-grid .step small {
+  color: var(--gold2);
+}
+
+.support-bottom-grid .step h3 {
+  color: #fff;
+}
+
+.support-bottom-grid .step p {
+  color: #aaa9a1;
+}
+
+@media(max-width:650px) {
+  .support-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 35px;
+    padding: 25px 20px;
+  }
+
+  .support-bottom-grid .support-form-wrap {
+    padding: 0 0 35px;
+    border-bottom: 1px solid #a87b20;
+  }
+
+  .support-bottom-grid .how-we-work {
+    padding: 0;
+    border-left: 0;
+  }
+
+  .support-bottom-grid .steps {
+    margin-top: 20px;
+  }
+}
+
+@media(max-width:650px) {
+  .support-grid {
+    grid-template-columns:1fr;
+  }
+
+  .support-form-wrap,
+  .application-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .application-wrap > div:first-child {
+    position: static;
+  }
+}
+
+@media(max-width:650px) {
+  .support-grid {
+    grid-template-columns:1fr;
+    gap: 9px;
+  }
+
+  .support-card {
+    padding: 18px 14px;
+    min-height: 190px;
+  }
+
+  .support-card h3 {
+  padding: 0 24px;
+    font-size: 15px;
+  }
+
+  .support-card p {
+  padding: 0 24px;
+    font-size: 9px;
+  }
+
+  .support-form-wrap {
+    padding: 22px 15px;
+    margin-top: 35px;
+  }
+
+  .support-form,
+  .application-form {
+    padding: 17px 14px;
+  }
+
+  .career-banner {
+    display: block;
+    padding: 24px 20px;
+  }
+
+  .career-banner .button {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-card {
+    padding: 22px 18px;
+  }
+
+  .application-wrap {
+    margin-top: 35px;
+  }
+
+  .application-wrap h2 {
+    font-size: 34px;
+  }
+}
+/* Technical Support Image */
+.support-image {
+  width: 100%;
+  margin: 32px 0;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.support-image img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* Support Center service images */
+.support-card-image {
+  width: 100%;
+  height: 280px;
+  margin: 0 0 24px;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+.support-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.support-card:hover .support-card-image img {
+  transform: scale(1.04);
+}
+
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>Eldoret, Kenya <b style="color:#d49b26">·</b> Mon – Sat · 8:00 AM – 6:00 PM · Eldoret, Kenya</span><div class="top-links"><a href="tel:+254707494395">+254 707 494 395</a></div></div></div>
+<header>
+  <nav class="wrap nav" aria-label="Main navigation">
+    <a class="brand" href="index.html#home" aria-label="MELTECH home">
+      <img src="assets/meltech-official.webp" alt="MELTECH snowflake and lightning emblem">
+      <span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="solutions.html">Solutions</a><a href="blog.html" aria-current="page">Blog</a><a href="contact.html">Contact</a>
+    </div>
+    <a class="nav-cta" href="contact.html#enquiry">Request a Quote</a>
+    <button class="menu" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+  </nav>
+</header>
+<main id="insights">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">MELTECH INSIGHTS · 06 / KNOWLEDGE</div>
+      <h1>Knowledge that helps.<br><em>Systems that last.</em></h1>
+      <p class="hero-copy">Practical guidance on HVAC maintenance, refrigeration, electrical safety, solar and backup power, laundry equipment and industrial automation — from the MELTECH team in Eldoret.</p>
+      <div class="hero-actions">
+        <a class="button button-gold" href="#latest-insights">Explore insights <span>↘</span></a>
+        <a class="button button-outline" href="contact.html#enquiry">Ask our team</a>
+      </div>
+      <div class="hero-trust"><span class="trust-star">✦</span>Practical advice · Technical experience · Reliable support</div>
+    </div>
+    <div class="hero-media">
+      <img class="hero-photo" src="assets/commercial-chiller.webp" alt="Commercial refrigeration and cooling equipment">
+      <div class="photo-tag"><strong>Technical knowledge. Practical solutions.</strong><span>Maintenance · Troubleshooting · Equipment care</span></div>
+    </div>
+    <div class="hero-index">06 — MELTECH INSIGHTS</div>
+  </div>
+</section>
+<div class="service-ribbon"><div class="wrap ribbon-grid">
+  <div class="ribbon-item"><span class="ribbon-icon">◈</span>HVAC &amp; COOLING</div>
+  <div class="ribbon-item"><span class="ribbon-icon">☼</span>SOLAR &amp; BACKUP</div>
+  <div class="ribbon-item"><span class="ribbon-icon">⚙</span>AUTOMATION</div>
+  <div class="ribbon-item"><span class="ribbon-icon">ϟ</span>ELECTRICAL</div>
+  <div class="ribbon-item"><span class="ribbon-icon">✓</span>EQUIPMENT CARE</div>
+</div></div>
+<section class="section" id="latest-insights">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="kicker">THE KNOW-HOW</div><h2>Practical guidance for equipment owners.</h2></div>
+      <p class="section-intro">Straightforward maintenance notes and technical explainers for homes, businesses and facilities teams. These introductory articles are a starting point for useful, locally relevant advice.</p>
+    </div>
+    <div class="solutions">
+      <article class="solution"><img src="assets/hvac-equipment.webp" alt="Air conditioning equipment" loading="lazy"><div class="solution-copy"><span class="solution-label">01 / HVAC MAINTENANCE</span><h3>Signs your air conditioner needs servicing</h3><p>Weak airflow, unusual sounds, water leaks and inconsistent cooling can point to a maintenance or diagnostic issue.</p><a class="solution-arrow" href="contact.html#enquiry" aria-label="Ask MELTECH about air conditioner servicing">↗</a></div></article>
+      <article class="solution"><img src="assets/commercial-chiller.webp" alt="Commercial refrigeration equipment" loading="lazy"><div class="solution-copy"><span class="solution-label">02 / REFRIGERATION</span><h3>Protecting cold-room performance</h3><p>Door seals, clear airflow, condenser cleanliness and temperature monitoring help support stable refrigeration.</p><a class="solution-arrow" href="contact.html#enquiry" aria-label="Discuss cold-room support">↗</a></div></article>
+      <article class="solution"><img src="assets/industrial-power-control.webp" alt="Electrical control panel" loading="lazy"><div class="solution-copy"><span class="solution-label">03 / ELECTRICAL SAFETY</span><h3>Why recurring electrical trips need attention</h3><p>Repeated breaker trips should be investigated by a qualified technician instead of being repeatedly reset without diagnosis.</p><a class="solution-arrow" href="contact.html#enquiry" aria-label="Request electrical technical support">↗</a></div></article>
+      <article class="solution"><img src="assets/energy-equipment.webp" alt="Solar and backup power equipment" loading="lazy"><div class="solution-copy"><span class="solution-label">04 / ENERGY</span><h3>Planning inverter and battery capacity</h3><p>List the loads, their running power and starting requirements before selecting a suitable backup system.</p><a class="solution-arrow" href="contact.html#enquiry" aria-label="Discuss backup power needs">↗</a></div></article>
+      <article class="solution"><img src="assets/laundry-equipment.webp" alt="Laundry machine" loading="lazy"><div class="solution-copy"><span class="solution-label">05 / LAUNDRY EQUIPMENT</span><h3>When a washing machine will not drain</h3><p>Drain filters, hoses, pumps and control signals may need checking. Disconnect power before any safe external inspection.</p><a class="solution-arrow" href="contact.html#enquiry" aria-label="Book a laundry equipment assessment">↗</a></div></article>
+      <article class="solution"><img src="assets/automation-equipment.webp" alt="Industrial automation controls" loading="lazy"><div class="solution-copy"><span class="solution-label">06 / AUTOMATION</span><h3>Details that help speed up a technical diagnosis</h3><p>Share the equipment model, fault code, symptoms and recent changes so a technician can prepare for the visit.</p><a class="solution-arrow" href="contact.html#enquiry" aria-label="Contact MELTECH about technical diagnosis">↗</a></div></article>
+    </div>
+  </div>
+</section>
+<section class="section why">
+  <div class="wrap why-grid">
+    <div>
+      <div class="kicker">TECHNICAL KNOW-HOW</div>
+      <h2>Understand the issue. Make a better decision.</h2>
+      <p class="why-copy">Good maintenance begins with noticing changes early and getting the right technical assessment. If equipment performance changes, a fault repeats or you are planning a new installation, MELTECH can help you identify practical next steps.</p>
+      <div class="features">
+        <div class="feature"><span class="feature-icon">✦</span><div><b>Practical explanations</b><span>Clear guidance on common equipment and system issues.</span></div></div>
+        <div class="feature"><span class="feature-icon">◈</span><div><b>Safety first</b><span>Know when a qualified technician should investigate.</span></div></div>
+        <div class="feature"><span class="feature-icon">✦</span><div><b>Preventive thinking</b><span>Small checks can help identify developing problems earlier.</span></div></div>
+        <div class="feature"><span class="feature-icon">◷</span><div><b>Local technical support</b><span>Contact MELTECH in Eldoret for advice on your requirements.</span></div></div>
+      </div>
+    </div>
+    <div class="why-image-wrap"><img class="why-image" src="assets/industrial-power-control.webp" alt="Industrial electrical power and control equipment"><div class="image-caption">INSPECT · UNDERSTAND · PLAN · MAINTAIN</div></div>
+  </div>
+</section>
+<section class="section contact">
+  <div class="wrap"><div class="contact-box">
+    <div class="contact-content"><div class="kicker">NEED A HAND?</div><h2>Let's talk about your equipment.</h2><p>For servicing, repairs, installations or a project quotation, the MELTECH team is ready to discuss your needs.</p></div>
+    <div class="contact-actions"><a class="button button-gold" href="contact.html#enquiry">Contact MELTECH ↗</a><a class="button button-outline" href="tel:+254707494395">Call our team</a></div>
+  </div></div>
+</section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footer-grid">
+  <div class="footer-brand"><a class="brand" href="index.html#home"><img src="assets/meltech-official.webp" alt="MELTECH official logo"><span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span></a><p>Powering comfort and delivering reliable electrical, HVAC, clean energy, refrigeration and laundry solutions.</p></div>
+  <div><div class="footer-title">EXPLORE</div><div class="footer-links"><a href="index.html#solutions">Our solutions</a><a href="about.html">About Meltech</a><a href="services.html">Services</a><a href="blog.html">Blog</a></div></div>
+  <div><div class="footer-title">SOLUTIONS</div><div class="footer-links"><a href="index.html#solutions">HVAC &amp; refrigeration</a><a href="index.html#solutions">Clean energy</a><a href="index.html#solutions">Electrical &amp; automation</a><a href="index.html#solutions">Laundry systems</a></div></div>
+  <div><div class="footer-title">CONTACT</div><div class="footer-links"><a href="tel:+254707494395">+254 707 494 395</a><a href="mailto:sales@meltechelecandrefrigeration.co.ke">sales@meltechelecandrefrigeration.co.ke</a><a href="mailto:info@meltechelecandrefrigeration.co.ke">info@meltechelecandrefrigeration.co.ke</a><span>Eldoret, Kenya</span><span>Mon – Sat · 8:00 AM – 6:00 PM</span></div></div>
+</div><div class="footend"><span>© 2026 MELTECH ELECTRICALS AND REFRIGERATION SERVICES. All rights reserved.</span><span><a href="privacy-policy.html">Privacy Policy</a> · <a href="cookie-policy.html">Cookie Policy</a></span><span>Powering comfort. Delivering reliability.</span></div></div></footer>
+<a class="mobile-call" href="tel:+254707494395">☎ &nbsp; Call MELTECH · +254 707 494 395</a>
+<script>
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.nav-links');
+if (menu && nav) {
+  menu.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(open));
+    menu.textContent = open ? '×' : '☰';
+  });
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.textContent = '☰';
+    });
+  });
+}
+</script>
+</body>
+</html>
