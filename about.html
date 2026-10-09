@@ -1,15 +1,17 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About MMELTECH | Electrical, HVAC & Refrigeration Services</title>
+  <meta name="theme-color" content="#080908">
+  <link rel="icon" href="assets/meltech-favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="assets/meltech-official.webp">
+  <title>About MELTECH | Electrical, HVAC &amp; Refrigeration Services</title>
 
-  <meta name="description" content="Learn about MMELTECH Electricals and Refrigeration Services, a Kenya-based technical services company providing electrical, HVAC, refrigeration, clean energy, automation and laundry solutions.">
+  <meta name="description" content="Learn about MELTECH Electricals and Refrigeration Services, a Kenya-based technical services company providing electrical, HVAC, refrigeration, clean energy, automation and laundry solutions.">
 
-  <link rel="icon" type="image/webp" href="assets/mMELTECH-official.webp">
+  <link rel="icon" type="image/webp" href="assets/meltech-official.webp">
 
   <style>
     :root{
@@ -658,6 +660,9 @@
         flex-direction:column;
       }
     }
+  
+    .menu{display:none;background:transparent;color:#fff;border:1px solid #b58a35;padding:8px 11px;font-size:21px}
+    @media(max-width:900px){.menu{display:block}.nav-links{display:none;position:absolute;left:0;right:0;top:100%;z-index:25;background:#080908;padding:20px 24px;flex-direction:column;align-items:stretch;gap:16px;border-bottom:1px solid #d4a333}.nav-links.open{display:flex}header{position:sticky;top:0;z-index:20}.nav{position:relative}}
   </style>
 </head>
 
@@ -667,20 +672,22 @@
   <div class="wrap nav">
 
     <a href="index.html" class="brand">
-      <img src="assets/mMELTECH-official.webp" alt="MMELTECH">
+      <img src="assets/meltech-official.webp" alt="MELTECH">
       <span class="brand-text">
-        <span class="brand-name">MMELTECH</span>
+        <span class="brand-name">MELTECH</span>
         <span class="brand-sub">ELECTRICALS &amp; REFRIGERATION</span>
       </span>
     </a>
 
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="index.html#solutions">Solutions</a>
-      <a href="index.html#support">Support</a>
-      <a href="index.html#quote" class="nav-cta">Request a Quote</a>
+      <a href="about.html" class="active" aria-current="page">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
+    <button class="menu" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 
   </div>
 </header>
@@ -692,7 +699,7 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-content">
-        <div class="kicker">ABOUT MMELTECH</div>
+        <div class="kicker">ABOUT MELTECH</div>
 
         <h1>
           Technical expertise.
@@ -725,7 +732,7 @@
       <div class="intro-copy">
 
         <p>
-          MMELTECH Electricals and Refrigeration Services is a Kenya-based
+          MELTECH Electricals and Refrigeration Services is a Kenya-based
           technical services company providing professional solutions across
           electrical systems, HVAC &amp; refrigeration, clean energy,
           industrial automation and commercial laundry.
@@ -874,7 +881,7 @@
     <div class="wrap">
       <div class="statement-inner">
 
-        <div class="section-label">THE MMELTECH STANDARD</div>
+        <div class="section-label">THE MELTECH STANDARD</div>
 
         <h2>
           Built for <span>reliability.</span>
@@ -919,12 +926,12 @@
 
       <div>
         <div class="footer-brand">
-          <img src="assets/mMELTECH-official.webp" alt="MMELTECH">
-          <strong>MMELTECH</strong>
+          <img src="assets/meltech-official.webp" alt="MELTECH">
+          <strong>MELTECH</strong>
         </div>
 
         <p class="footer-text">
-          MMELTECH Electricals and Refrigeration Services provides
+          MELTECH Electricals and Refrigeration Services provides
           professional electrical, HVAC, refrigeration, clean energy,
           automation and laundry solutions across Kenya.
         </p>
@@ -935,7 +942,7 @@
 
         <div class="footer-links">
           <a href="index.html">Home</a>
-          <a href="about.html">About MMELTECH</a>
+          <a href="about.html">About MELTECH</a>
           <a href="index.html#solutions">Solutions</a>
           <a href="index.html#support">Support Center</a>
           <a href="index.html#quote">Request a Quote</a>
@@ -948,25 +955,35 @@
         <div class="footer-contact">
           Eldoret, Kenya<br>
           +254 707 494 395<br>
-          mMELTECHelectricals@gmail.com
+          sales@meltechelecandrefrigeration.co.ke
         </div>
       </div>
 
     </div>
 
     <div class="footer-bottom">
-      <span>© 2026 MMELTECH Electricals and Refrigeration Services</span>
+      <span>© 2026 MELTECH Electricals and Refrigeration Services</span>
       <span>Built for reliability. Designed for performance.</span>
     </div>
 
   </div>
 </footer>
 
+<script>
+  const menuButton = document.querySelector('.menu');
+  const pageNav = document.querySelector('.nav-links');
+  if (menuButton && pageNav) {
+    menuButton.addEventListener('click', () => {
+      const open = pageNav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.textContent = open ? '×' : '☰';
+    });
+    pageNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      pageNav.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = '☰';
+    }));
+  }
+</script>
 </body>
 </html>
-```
-
-
-
-
-
