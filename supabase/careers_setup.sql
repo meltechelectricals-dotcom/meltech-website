@@ -58,7 +58,7 @@ alter table public.career_admins enable row level security;
 
 -- Remove any legacy policies on this table first: permissive policies are OR-combined,
 -- so an older public-read policy must not remain alongside the admin-only policy.
-do $
+do $$
 declare p record;
 begin
   for p in select policyname from pg_policies
@@ -66,7 +66,7 @@ begin
   loop
     execute format('drop policy if exists %I on public.applications', p.policyname);
   end loop;
-end $;
+end $$;
 
 drop policy if exists "Public can submit career applications" on public.applications;
 create policy "Public can submit career applications"
@@ -102,7 +102,7 @@ on conflict (id) do update set public = false, file_size_limit = 5242880,
   allowed_mime_types = excluded.allowed_mime_types;
 
 -- Remove old policies specifically tied to this private CV bucket, without affecting other buckets.
-do $
+do $$
 declare p record;
 begin
   for p in select policyname from pg_policies
@@ -111,7 +111,7 @@ begin
   loop
     execute format('drop policy if exists %I on storage.objects', p.policyname);
   end loop;
-end $;
+end $$;
 
 drop policy if exists "Applicants can upload CVs" on storage.objects;
 create policy "Applicants can upload CVs"
