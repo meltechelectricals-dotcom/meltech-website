@@ -153,34 +153,42 @@
     /* HERO */
 
     .hero{
-      min-height:440px;
-      display:flex;
-      align-items:center;
       position:relative;
       overflow:hidden;
+      background:var(--black);
+      color:#fff;
       border-bottom:1px solid var(--line);
-      background:
-        radial-gradient(circle at 80% 30%, rgba(212,175,55,.12), transparent 35%),
-        linear-gradient(135deg,#080808 0%,#111111 55%,#080808 100%);
     }
-
-    .hero:after{
+    .hero:before{
       content:"";
       position:absolute;
-      right:-140px;
-      top:-180px;
-      width:500px;
-      height:500px;
-      border:1px solid rgba(212,175,55,.12);
-      border-radius:50%;
+      inset:0;
+      background:radial-gradient(ellipse at 75% 40%,#ad761a2b,transparent 44%),linear-gradient(155deg,transparent 82%,#d9981a 82.1%,#f0c044 82.4%,transparent 83.1%);
+      pointer-events:none;
     }
-
-    .hero-content{
+    .hero-grid{
       position:relative;
-      z-index:2;
-      max-width:800px;
-      padding:80px 0;
+      min-height:605px;
+      display:grid;
+      grid-template-columns:.91fr 1.09fr;
+      align-items:center;
+      gap:34px;
+      padding-top:48px;
+      padding-bottom:57px;
     }
+    .hero-content{position:relative;z-index:2;max-width:680px;padding:0}
+    .hero-media{height:455px;position:relative;display:flex;align-items:center;justify-content:center}
+    .hero-photo{
+      width:100%;height:390px;object-fit:cover;object-position:center 43%;
+      border-radius:5px;border:1px solid #cd961e;box-shadow:0 18px 65px #000b;
+      mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 100%);
+    }
+    .photo-tag{position:absolute;left:0;bottom:25px;background:#070807ef;border:1px solid #d99b25;padding:15px 18px;max-width:250px;box-shadow:0 8px 25px #0006}
+    .photo-tag strong{display:block;color:var(--gold-light);font:700 14px var(--serif);letter-spacing:.03em}
+    .photo-tag span{display:block;margin-top:5px;color:#d5d2cb;font-size:10px;line-height:1.5}
+    .hero-index{position:absolute;right:0;bottom:25px;font-size:9px;letter-spacing:.16em;color:#99978f}
+    .hero h1{font-family:var(--serif);font-size:clamp(45px,5.5vw,73px);line-height:.99;letter-spacing:-.065em;max-width:600px;margin:22px 0 18px}
+    .hero p{max-width:485px;color:#c9c8c1;font-size:15px;line-height:1.8}
 
     .kicker{
       color:var(--gold);
@@ -648,17 +656,13 @@
         font-size:7px;
       }
 
-      .hero{
-        min-height:400px;
-      }
-
-      .hero-content{
-        padding:65px 0;
-      }
-
-      .hero h1{
-        font-size:43px;
-      }
+      .hero-grid{grid-template-columns:1fr;min-height:0;gap:8px;padding-top:58px;padding-bottom:55px}
+      .hero-content{padding:0}
+      .hero h1{font-size:43px;line-height:1.02}
+      .hero-media{height:310px;margin-top:12px}
+      .hero-photo{height:275px;mask-image:linear-gradient(90deg,transparent 0%,#000 7%,#000 100%)}
+      .photo-tag{left:0;bottom:12px}
+      .hero-index{right:0;bottom:12px;font-size:8px}
 
       .section{
         padding:68px 0;
@@ -734,22 +738,28 @@
   <!-- HERO -->
 
   <section class="hero">
-    <div class="wrap">
+    <div class="wrap hero-grid">
       <div class="hero-content">
-        <div class="kicker">ABOUT MELTECH</div>
-
+        <div class="kicker">ABOUT MELTECH · ELDORET, KENYA</div>
         <h1>
-          Technical expertise.
-          <span>Practical solutions.</span>
+          Technical expertise.<br>
+          <span>Practical solutions.</span><br>
           Reliable results.
         </h1>
-
         <p>
           A Kenya-based technical services company delivering dependable
           electrical, HVAC, refrigeration, clean energy, automation and
           commercial laundry solutions.
         </p>
       </div>
+      <div class="hero-media">
+        <img class="hero-photo" src="assets/industrial-power-control.webp" alt="Electrical and power systems equipment from MELTECH">
+        <div class="photo-tag">
+          <strong>Electrical &amp; power systems</strong>
+          <span>Power distribution · Control panels · Technical services</span>
+        </div>
+      </div>
+      <div class="hero-index">01 — ENGINEERED FOR RELIABILITY</div>
     </div>
   </section>
 
