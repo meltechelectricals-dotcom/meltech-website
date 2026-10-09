@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080908">
+<link rel="icon" href="assets/meltech-favicon.ico" sizes="any"><title>Careers Admin | MELTECH</title>
+<style>
+:root{--black:#080908;--black2:#111210;--gold:#e8aa29;--gold2:#f6cf69;--paper:#f4f3ef;--ink:#121311;--muted:#73736d;--line:#dedbd2}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.55 Inter,Arial,sans-serif}button,input,select,textarea{font:inherit}a{color:inherit;text-decoration:none}.top{background:var(--black);color:var(--gold2);padding:17px 24px;border-bottom:1px solid #8c671b;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{font-weight:800;letter-spacing:.09em}.brand small{display:block;font-size:10px;color:#e2ded4;letter-spacing:.12em}.wrap{width:min(1250px,calc(100% - 36px));margin:34px auto}.panel{background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px;box-shadow:0 10px 32px #00000008}.hidden{display:none!important}.gold{background:linear-gradient(135deg,#f6cf69,#db9718);border:1px solid #e9b53f;color:#10100d;font-weight:800}.btn{border-radius:4px;padding:10px 15px;cursor:pointer;border:1px solid #c8c4b9;background:#fff;color:#222}.btn:disabled{opacity:.6;cursor:wait}h1{font-size:clamp(26px,4vw,38px);letter-spacing:-.04em;margin:0 0 8px}h2{font-size:19px;margin:0 0 15px}.muted{color:var(--muted)}.field{display:grid;gap:6px;margin:12px 0}.field label{font-size:12px;font-weight:700}.field input,.field select,.field textarea{padding:12px;border:1px solid #d8d8d0;border-radius:4px;width:100%;background:#fcfcfa}.login{max-width:430px;margin:50px auto}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}.stat{padding:16px;border:1px solid var(--line);border-radius:6px;background:#fff}.stat strong{font-size:26px;display:block}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.toolbar input,.toolbar select{padding:10px;border:1px solid #d8d8d0;border-radius:4px;background:#fff}.table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:6px}table{width:100%;border-collapse:collapse;min-width:900px}th,td{text-align:left;padding:12px;border-bottom:1px solid #eceae3;vertical-align:top;font-size:12px}th{background:#f7f6f2;color:#55564f;position:sticky;top:0}td .sub{display:block;color:#777;font-size:11px;margin-top:3px}.status-select{padding:7px;border:1px solid #d8d8d0;border-radius:4px;max-width:150px}.note{width:170px;min-height:55px;padding:7px;border:1px solid #d8d8d0;border-radius:4px}.message{padding:12px;border-radius:4px;margin:12px 0;background:#f4f3ef}.message.error{color:#8b2020;background:#fff0f0}.message.ok{color:#176b39;background:#eaf7ee}.app-detail{min-width:250px;max-width:320px;white-space:pre-wrap}.empty{padding:28px;text-align:center;color:var(--muted)}@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.panel{padding:16px}.top{padding:14px 17px}.wrap{width:calc(100% - 24px);margin:18px auto}.login{margin:24px auto}}
+</style></head><body>
+<div class="top"><a class="brand" href="careers.html">MELTECH <small>CAREERS ADMINISTRATION</small></a><a href="careers.html">← Public Careers Page</a></div>
+<main class="wrap">
+<section id="loginPanel" class="panel login">
+<h1>Careers dashboard</h1><p class="muted">Sign in with the administrator account configured in Supabase.</p>
+<form id="loginForm"><div class="field"><label for="adminEmail">Administrator email</label><input id="adminEmail" type="email" autocomplete="username" required></div><div class="field"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required></div><button class="btn gold" id="loginButton" type="submit">Sign in</button></form>
+<div id="loginMessage" class="message hidden" role="status"></div>
+<p class="muted" style="font-size:12px">Access is restricted to administrator accounts explicitly authorized in the database.</p>
+</section>
+<section id="dashboardPanel" class="hidden">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap"><div><h1>Applications</h1><p class="muted">Review candidates, update progress and access CVs privately.</p></div><button class="btn" id="signOutButton">Sign out</button></div>
+<div class="stats"><div class="stat"><span class="muted">Total</span><strong id="statTotal">0</strong></div><div class="stat"><span class="muted">New</span><strong id="statNew">0</strong></div><div class="stat"><span class="muted">Reviewing</span><strong id="statReviewing">0</strong></div><div class="stat"><span class="muted">Shortlisted</span><strong id="statShortlisted">0</strong></div></div>
+<div id="dashMessage" class="message hidden" role="status"></div>
+<div class="toolbar"><input id="searchBox" type="search" placeholder="Search name, email, phone or skills" aria-label="Search applicants"><select id="typeFilter" aria-label="Filter by application type"><option value="">All application types</option><option value="job">Jobs</option><option value="internship">Internships</option><option value="attachment">Industrial attachment</option></select><select id="statusFilter" aria-label="Filter by status"><option value="">All statuses</option><option value="new">New</option><option value="reviewing">Reviewing</option><option value="shortlisted">Shortlisted</option><option value="interview">Interview</option><option value="accepted">Accepted</option><option value="rejected">Rejected</option></select><button class="btn" id="refreshButton">Refresh</button></div>
+<div class="table-wrap"><table><thead><tr><th>Applicant</th><th>Application</th><th>Education / experience</th><th>Motivation / skills</th><th>CV</th><th>Status</th><th>Admin notes</th><th>Save</th></tr></thead><tbody id="applicationsBody"><tr><td colspan="8" class="empty">Loading applications…</td></tr></tbody></table></div>
+<p class="muted" style="font-size:11px;margin-top:12px">Applicant information is confidential. Sign out when finished, especially on shared devices.</p>
+</section></main>
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const supabase=createClient('https://aqvjxumddemwfsbghubx.supabase.co','sb_publishable_bReohRcF1nZyxB2WQi33ng_LAlRCEDB');
+const $=id=>document.getElementById(id);
+const loginPanel=$('loginPanel'), dashboardPanel=$('dashboardPanel');
+let applications=[];
+const esc=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const typeName=value=>({job:'Jobs & Careers',internship:'Internship',attachment:'Industrial Attachment'}[value]||value||'—');
+function message(id,text,kind=''){const el=$(id);el.textContent=text;el.className='message'+(kind?' '+kind:'');el.classList.remove('hidden')}
+function hideMessage(id){$(id).classList.add('hidden')}
+async function showDashboard(session){
+ if(!session){loginPanel.classList.remove('hidden');dashboardPanel.classList.add('hidden');return}
+ loginPanel.classList.add('hidden');dashboardPanel.classList.remove('hidden');
+ await loadApplications();
+}
+async function loadApplications(){
+ $('applicationsBody').innerHTML='<tr><td colspan="8" class="empty">Loading applications…</td></tr>';
+ const {data,error}=await supabase.from('applications').select('*').order('created_at',{ascending:false}).limit(500);
+ if(error){applications=[];$('applicationsBody').innerHTML='<tr><td colspan="8" class="empty">Could not load applications. Confirm this account is listed in career_admins and the SQL setup has been run.</td></tr>';message('dashMessage',error.message,'error');return}
+ applications=data||[];hideMessage('dashMessage');render();
+}
+function render(){
+ $('statTotal').textContent=applications.length;
+ $('statNew').textContent=applications.filter(a=>a.status==='new').length;
+ $('statReviewing').textContent=applications.filter(a=>a.status==='reviewing').length;
+ $('statShortlisted').textContent=applications.filter(a=>a.status==='shortlisted').length;
+ const query=$('searchBox').value.toLowerCase().trim(),type=$('typeFilter').value,status=$('statusFilter').value;
+ const rows=applications.filter(a=>(!type||a.application_type===type)&&(!status||a.status===status)&&(!query||[a.full_name,a.email,a.phone,a.skills,a.course,a.position_applied].some(v=>String(v||'').toLowerCase().includes(query))));
+ if(!rows.length){$('applicationsBody').innerHTML='<tr><td colspan="8" class="empty">No applications match these filters.</td></tr>';return}
+ $('applicationsBody').innerHTML=rows.map(a=>'<tr data-id="'+esc(a.id)+'">'+
+ '<td><strong>'+esc(a.full_name)+'</strong><span class="sub">'+esc(a.email)+'</span><span class="sub">'+esc(a.phone)+'</span><span class="sub">'+esc(a.location)+'</span><span class="sub">'+esc(new Date(a.created_at).toLocaleString())+'</span></td>'+
+ '<td>'+esc(typeName(a.application_type))+'<span class="sub">'+esc(a.position_applied||'No role specified')+'</span></td>'+
+ '<td class="app-detail">'+esc([a.institution,a.course,a.year_of_study,a.qualifications,a.experience].filter(Boolean).join('\n'))+'</td>'+
+ '<td class="app-detail">'+esc([a.skills,a.motivation].filter(Boolean).join('\n\n'))+'</td>'+
+ '<td><button class="btn cv-button" data-id="'+esc(a.id)+'">Open CV</button></td>'+
+ '<td><select class="status-select" aria-label="Application status">'+['new','reviewing','shortlisted','interview','accepted','rejected'].map(s=>'<option value="'+s+'"'+(a.status===s?' selected':'')+'>'+s.charAt(0).toUpperCase()+s.slice(1)+'</option>').join('')+'</select></td>'+
+ '<td><textarea class="note" aria-label="Admin notes">'+esc(a.admin_notes||'')+'</textarea></td><td><button class="btn gold save-button" data-id="'+esc(a.id)+'">Save</button></td></tr>').join('');
+ document.querySelectorAll('.cv-button').forEach(b=>b.addEventListener('click',()=>openCv(b.dataset.id,b)));
+ document.querySelectorAll('.save-button').forEach(b=>b.addEventListener('click',()=>saveRow(b.dataset.id,b)));
+}
+async function openCv(id,button){
+ const app=applications.find(a=>a.id===id);if(!app||!app.cv_path)return message('dashMessage','No CV file is attached to this record.','error');
+ button.disabled=true;
+ const {data,error}=await supabase.storage.from('application-cvs').createSignedUrl(app.cv_path,60);
+ button.disabled=false;
+ if(error)return message('dashMessage','Could not open CV: '+error.message,'error');
+ window.open(data.signedUrl,'_blank','noopener,noreferrer');
+}
+async function saveRow(id,button){
+ const row=button.closest('tr'),status=row.querySelector('.status-select').value,notes=row.querySelector('.note').value;
+ button.disabled=true;button.textContent='Saving…';
+ const {error}=await supabase.from('applications').update({status,admin_notes:notes,updated_at:new Date().toISOString()}).eq('id',id);
+ button.disabled=false;button.textContent='Save';
+ if(error)return message('dashMessage','Could not save changes: '+error.message,'error');
+ const current=applications.find(a=>a.id===id);if(current){current.status=status;current.admin_notes=notes}render();message('dashMessage','Application updated.','ok');
+}
+$('loginForm').addEventListener('submit',async e=>{e.preventDefault();const button=$('loginButton');button.disabled=true;button.textContent='Signing in…';hideMessage('loginMessage');const {data,error}=await supabase.auth.signInWithPassword({email:$('adminEmail').value.trim(),password:$('adminPassword').value});button.disabled=false;button.textContent='Sign in';if(error)return message('loginMessage',error.message,'error');const {data:admin}=await supabase.from('career_admins').select('user_id').eq('user_id',data.user.id).maybeSingle();if(!admin){await supabase.auth.signOut();return message('loginMessage','This account is not authorized as a MELTECH careers administrator.','error')}await showDashboard(data.session)});
+$('signOutButton').addEventListener('click',async()=>{await supabase.auth.signOut();await showDashboard(null)});
+$('refreshButton').addEventListener('click',loadApplications);
+['searchBox','typeFilter','statusFilter'].forEach(id=>$(id).addEventListener(id==='searchBox'?'input':'change',render));
+const {data:{session}}=await supabase.auth.getSession();if(session){const {data:admin}=await supabase.from('career_admins').select('user_id').eq('user_id',session.user.id).maybeSingle();if(admin)await showDashboard(session);else{await supabase.auth.signOut();await showDashboard(null)}}else await showDashboard(null);
+</script></body></html>
