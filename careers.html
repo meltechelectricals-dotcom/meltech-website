@@ -555,6 +555,27 @@
   transform: scale(1.04);
 }
 
+
+/* Application submission */
+#application-form{scroll-margin-top:110px}
+.career-apply{padding:82px 0;background:#eae8e1}
+.career-apply-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}
+.career-apply-copy h2{font:700 clamp(32px,4vw,46px)/1.08 var(--serif);letter-spacing:-.06em;margin:12px 0}
+.career-apply-copy p{font-size:13px;line-height:1.8;color:#62635d}
+.career-apply-copy .privacy-note{padding:14px;border-left:2px solid var(--gold);background:#fff;font-size:11px}
+.application-form{background:#fff;border:1px solid #ded6c4;border-radius:5px;padding:26px;box-shadow:0 12px 30px #3430180a}
+.application-fields{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.application-form label{display:flex;flex-direction:column;gap:7px;font-size:10px;letter-spacing:.04em;font-weight:700;color:#363730;margin-bottom:15px}
+.application-form input,.application-form select,.application-form textarea{width:100%;border:1px solid #d8d8d0;background:#fafaf8;border-radius:3px;padding:12px 11px;font:400 12px var(--sans);color:#1b1c18;outline:none}
+.application-form input:focus,.application-form select:focus,.application-form textarea:focus{border-color:#c8911d;box-shadow:0 0 0 3px #dfa92320}
+.application-form textarea{resize:vertical;min-height:90px}
+.application-form .full{grid-column:1/-1}
+.application-form .form-help{font-size:10px;color:#77766e;line-height:1.6;font-weight:400;letter-spacing:0}
+.application-status{font-size:12px;line-height:1.6;margin:14px 0 0}
+.application-status.success{color:#176b39}.application-status.error{color:#a32626}
+.application-form button:disabled{opacity:.65;cursor:wait}
+@media(max-width:700px){.career-apply{padding:60px 0}.career-apply-grid{grid-template-columns:1fr;gap:22px}.application-form{padding:18px 15px}.application-fields{grid-template-columns:1fr}.application-form .full{grid-column:auto}}
+
 </style>
   <style>
   .career-hero{background:var(--black);color:#fff;position:relative;overflow:hidden;border-bottom:1px solid var(--gold)}
@@ -643,27 +664,89 @@
         <h3>Jobs &amp; Careers</h3>
         <p>For skilled and motivated people ready to contribute to customer projects, installations, maintenance and technical operations.</p>
         <ul><li>Electrical and refrigeration work</li><li>HVAC, service and maintenance</li><li>Technical support and operations</li></ul>
-        <a class="button button-gold" href="mailto:info@meltechelecandrefrigeration.co.ke?subject=Career%20Application%20-%20MELTECH">Apply for a job ↗</a>
+        <a class="button button-gold" href="#application-form" data-application-type="job">Apply for a job ↗</a>
       </article>
       <article class="career-card">
         <div class="career-number">02 / EARLY CAREER</div>
         <h3>Internships</h3>
         <p>Build practical experience, learn from real service environments and connect your studies with hands-on technical work.</p>
         <ul><li>Guided learning and exposure</li><li>Practical technical experience</li><li>Professional skills development</li></ul>
-        <a class="button button-gold" href="mailto:info@meltechelecandrefrigeration.co.ke?subject=Internship%20Application%20-%20MELTECH">Apply for internship ↗</a>
+        <a class="button button-gold" href="#application-form" data-application-type="internship">Apply for internship ↗</a>
       </article>
       <article class="career-card">
         <div class="career-number">03 / STUDENT PLACEMENT</div>
         <h3>Industrial Attachment</h3>
         <p>For students seeking workplace exposure and an opportunity to understand technical standards, teamwork and service delivery.</p>
         <ul><li>Technical learning in the field</li><li>Exposure to workplace practice</li><li>Institution placement support</li></ul>
-        <a class="button button-gold" href="mailto:info@meltechelecandrefrigeration.co.ke?subject=Industrial%20Attachment%20Application%20-%20MELTECH">Apply for attachment ↗</a>
+        <a class="button button-gold" href="#application-form" data-application-type="attachment">Apply for attachment ↗</a>
       </article>
     </div>
     <div class="career-note">
-      <div><h3>Ready to introduce yourself?</h3><p>Email your CV or resume, the opportunity you are applying for, your qualifications or course, availability and a short note about your interest. Please include your contact details. Applications are reviewed according to current business needs and available placement capacity.</p></div>
-      <a class="button button-gold" href="mailto:info@meltechelecandrefrigeration.co.ke?subject=Career%20Opportunity%20Enquiry%20-%20MELTECH">Email MELTECH ↗</a>
+      <div><h3>Ready to introduce yourself?</h3><p>Submit your details and CV through the secure application form. Applications are reviewed according to current business needs and available placement capacity.</p></div>
+      <a class="button button-gold" href="#application-form">Start an application ↓</a>
     </div>
+  </div>
+</section>
+<section class="career-apply" id="application-form">
+  <div class="wrap career-apply-grid">
+    <div class="career-apply-copy">
+      <div class="eyebrow">APPLY ONLINE</div>
+      <h2>Your next step starts here.</h2>
+      <p>Complete the form below and attach your CV or resume. Your application will be saved for the MELTECH recruitment team to review.</p>
+      <p class="privacy-note"><strong>Privacy:</strong> Your application and CV are stored in a private system and are not displayed publicly. Only authorized MELTECH administrators can review them.</p>
+      <p class="form-help">Accepted CV formats: PDF, DOC or DOCX. Maximum file size: 5 MB.</p>
+    </div>
+    <form class="application-form" id="careerApplicationForm">
+      <div class="application-fields">
+        <label>Application type *
+          <select name="application_type" id="application_type" required>
+            <option value="job">Jobs &amp; Careers</option><option value="internship">Internship</option><option value="attachment">Industrial Attachment</option>
+          </select>
+        </label>
+        <label>Full name *
+          <input name="full_name" autocomplete="name" required maxlength="150">
+        </label>
+        <label>Email address *
+          <input name="email" type="email" autocomplete="email" required maxlength="254">
+        </label>
+        <label>Phone number *
+          <input name="phone" type="tel" autocomplete="tel" required maxlength="40">
+        </label>
+        <label>Town / location *
+          <input name="location" autocomplete="address-level2" required maxlength="120">
+        </label>
+        <label>Role or area of interest
+          <input name="position_applied" maxlength="180" placeholder="e.g. Refrigeration technician">
+        </label>
+        <label>Institution (students)
+          <input name="institution" maxlength="180">
+        </label>
+        <label>Course / qualification
+          <input name="course" maxlength="180">
+        </label>
+        <label>Year of study (if applicable)
+          <input name="year_of_study" maxlength="60">
+        </label>
+        <label>Qualifications
+          <input name="qualifications" maxlength="500" placeholder="Certificates, licenses or training">
+        </label>
+        <label class="full">Relevant experience
+          <textarea name="experience" rows="3" maxlength="3000" placeholder="Briefly describe relevant experience or placements"></textarea>
+        </label>
+        <label class="full">Skills
+          <textarea name="skills" rows="2" maxlength="2000" placeholder="Technical skills and areas of interest"></textarea>
+        </label>
+        <label class="full">Why would you like to join MELTECH?
+          <textarea name="motivation" rows="3" maxlength="3000"></textarea>
+        </label>
+        <label class="full">Attach CV / resume *
+          <input name="cv_file" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+          <span class="form-help">PDF, DOC or DOCX · Up to 5 MB</span>
+        </label>
+      </div>
+      <button class="button button-gold quote-submit" type="submit">Submit application</button>
+      <p id="applicationStatus" class="application-status" role="status" aria-live="polite"></p>
+    </form>
   </div>
 </section>
 </main>
@@ -684,6 +767,68 @@ if (menu && nav) {
     menu.textContent = '☰';
   }));
 }
+</script>
+<script type="module">
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+const supabase = createClient('https://aqvjxumddemwfsbghubx.supabase.co', 'sb_publishable_bReohRcF1nZyxB2WQi33ng_LAlRCEDB');
+const form = document.getElementById('careerApplicationForm');
+const statusBox = document.getElementById('applicationStatus');
+const typeSelect = document.getElementById('application_type');
+document.querySelectorAll('[data-application-type]').forEach(button => button.addEventListener('click', () => {
+  typeSelect.value = button.dataset.applicationType;
+  document.getElementById('application-form').scrollIntoView({behavior:'smooth',block:'start'});
+  typeSelect.focus({preventScroll:true});
+}));
+form?.addEventListener('submit', async event => {
+  event.preventDefault();
+  const submit = form.querySelector('[type="submit"]');
+  statusBox.textContent = '';
+  statusBox.className = 'application-status';
+  submit.disabled = true;
+  submit.textContent = 'Submitting application…';
+  let uploadedPath = null;
+  try {
+    const data = new FormData(form);
+    const file = data.get('cv_file');
+    if (!file || !file.size) throw new Error('Please attach your CV or resume.');
+    if (file.size > 5 * 1024 * 1024) throw new Error('Your CV must be 5 MB or smaller.');
+    const allowed = ['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    if (!allowed.includes(file.type)) throw new Error('Please upload a PDF, DOC, or DOCX file.');
+    const cleanName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_').slice(-100);
+    uploadedPath = crypto.randomUUID() + '-' + cleanName;
+    const { error: uploadError } = await supabase.storage.from('application-cvs').upload(uploadedPath, file, {contentType:file.type, upsert:false});
+    if (uploadError) throw uploadError;
+    const payload = {
+      application_type: data.get('application_type'),
+      full_name: String(data.get('full_name') || '').trim(),
+      phone: String(data.get('phone') || '').trim(),
+      email: String(data.get('email') || '').trim(),
+      location: String(data.get('location') || '').trim(),
+      position_applied: String(data.get('position_applied') || '').trim() || null,
+      institution: String(data.get('institution') || '').trim() || null,
+      course: String(data.get('course') || '').trim() || null,
+      year_of_study: String(data.get('year_of_study') || '').trim() || null,
+      qualifications: String(data.get('qualifications') || '').trim() || null,
+      experience: String(data.get('experience') || '').trim() || null,
+      skills: String(data.get('skills') || '').trim() || null,
+      motivation: String(data.get('motivation') || '').trim() || null,
+      cv_path: uploadedPath,
+      status: 'new'
+    };
+    const { error: insertError } = await supabase.from('applications').insert(payload);
+    if (insertError) throw insertError;
+    form.reset();
+    statusBox.textContent = 'Application submitted successfully. Thank you for your interest in MELTECH.';
+    statusBox.classList.add('success');
+  } catch (error) {
+    if (uploadedPath) await supabase.storage.from('application-cvs').remove([uploadedPath]).catch(() => {});
+    statusBox.textContent = error.message || 'We could not submit your application. Please try again later.';
+    statusBox.classList.add('error');
+  } finally {
+    submit.disabled = false;
+    submit.textContent = 'Submit application';
+  }
+});
 </script>
 </body>
 </html>
