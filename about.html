@@ -513,82 +513,33 @@
       color:var(--gold-light);
     }
 
-    /* FOOTER */
+    /* FOOTER — matched to the homepage */
+    .footer{background:#060706;color:#c6c2b8;padding:52px 0 22px;border-top:1px solid #745618}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:35px}
+    .footer-brand .brand{display:inline-flex;align-items:center;gap:12px;margin:0;text-decoration:none}
+    .footer-brand .brand img{width:55px;height:55px;object-fit:contain;filter:drop-shadow(0 3px 8px #d49a2a55)}
+    .footer-brand .brand-text{display:block;color:var(--gold-light);font:800 22px/1 var(--serif);letter-spacing:.055em;text-shadow:0 2px 1px #a36a0a,0 4px 7px #000}
+    .footer-brand .brand-text small{display:block;margin-top:6px;color:#f5f2e9;font:600 9px/1.3 var(--sans);letter-spacing:.14em}
+    .footer-brand p{font-size:11px;line-height:1.8;color:#929188;max-width:265px;margin-top:17px}
+    .footer-title{color:var(--gold-light);font-size:9px;letter-spacing:.17em;font-weight:800;margin-bottom:16px}
+    .footer-links{display:flex;flex-direction:column;gap:11px;font-size:11px;color:#c4c0b7}
+    .footer-links a{color:inherit;text-decoration:none}
+    .footer-links a:hover{color:var(--gold-light)}
+    .footend{margin-top:39px;padding-top:17px;border-top:1px solid #262720;display:flex;justify-content:space-between;gap:20px;color:#818077;font-size:9px}
+    .footend a{color:inherit;text-decoration:none}
+    .footend a:hover{color:var(--gold-light)}
 
-    footer{
-      border-top:1px solid var(--line);
-      background:#050505;
-      padding:55px 0 25px;
+    @media(max-width:900px){
+      .footer-grid{grid-template-columns:1.2fr 1fr 1fr}
+      .footer-grid>div:last-child{grid-column:2/4}
     }
-
-    .footer-grid{
-      display:grid;
-      grid-template-columns:1.5fr 1fr 1fr;
-      gap:50px;
-      padding-bottom:45px;
-    }
-
-    .footer-brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:20px;
-    }
-
-    .footer-brand img{
-      width:48px;
-      height:48px;
-      object-fit:contain;
-    }
-
-    .footer-brand strong{
-      letter-spacing:.1em;
-    }
-
-    .footer-text{
-      color:#888;
-      font-size:14px;
-      line-height:1.8;
-      max-width:430px;
-    }
-
-    .footer-title{
-      color:var(--gold);
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:.18em;
-      margin-bottom:18px;
-    }
-
-    .footer-links{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-
-    .footer-links a{
-      color:#aaa;
-      font-size:14px;
-    }
-
-    .footer-links a:hover{
-      color:var(--gold-light);
-    }
-
-    .footer-contact{
-      color:#aaa;
-      font-size:14px;
-      line-height:2;
-    }
-
-    .footer-bottom{
-      border-top:1px solid rgba(255,255,255,.08);
-      padding-top:20px;
-      display:flex;
-      justify-content:space-between;
-      gap:20px;
-      color:#666;
-      font-size:12px;
+    @media(max-width:560px){
+      .footer-grid{grid-template-columns:1fr;gap:30px 17px}
+      .footer-grid>div:last-child{grid-column:auto}
+      .footend{flex-direction:column;gap:10px}
+      .footer-brand .brand img{width:46px;height:46px}
+      .footer-brand .brand-text{font-size:18px}
+      .footer-brand .brand-text small{font-size:7px}
     }
 
     /* MOBILE */
@@ -965,53 +916,48 @@
 
 </main>
 
-<footer>
+<footer class="footer">
   <div class="wrap">
-
     <div class="footer-grid">
-
-      <div>
-        <div class="footer-brand">
-          <img src="assets/meltech-official.webp" alt="MELTECH">
-          <strong>MELTECH</strong>
-        </div>
-
-        <p class="footer-text">
-          MELTECH Electricals and Refrigeration Services provides
-          professional electrical, HVAC, refrigeration, clean energy,
-          automation and laundry solutions across Kenya.
-        </p>
+      <div class="footer-brand">
+        <a class="brand" href="index.html#home" aria-label="MELTECH home">
+          <img src="assets/meltech-official.webp" alt="">
+          <span class="brand-text">MELTECH<small>ELECTRICALS &amp; REFRIGERATION SERVICES</small></span>
+        </a>
+        <p>Powering comfort and delivering reliable electrical, HVAC, clean energy, refrigeration and laundry solutions.</p>
       </div>
-
       <div>
-        <div class="footer-title">QUICK LINKS</div>
-
+        <div class="footer-title">EXPLORE</div>
         <div class="footer-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About MELTECH</a>
-          <a href="index.html#solutions">Solutions</a>
-          <a href="index.html#support">Support Center</a>
-          <a href="index.html#quote">Request a Quote</a>
+          <a href="index.html#solutions">Our solutions</a>
+          <a href="about.html">About Meltech</a>
         </div>
       </div>
-
+      <div>
+        <div class="footer-title">SOLUTIONS</div>
+        <div class="footer-links">
+          <a href="index.html#solutions">HVAC &amp; refrigeration</a>
+          <a href="index.html#solutions">Clean energy</a>
+          <a href="index.html#solutions">Electrical &amp; automation</a>
+          <a href="index.html#solutions">Laundry systems</a>
+        </div>
+      </div>
       <div>
         <div class="footer-title">CONTACT</div>
-
-        <div class="footer-contact">
-          Eldoret, Kenya<br>
-          +254 707 494 395<br>
-          sales@meltechelecandrefrigeration.co.ke
+        <div class="footer-links">
+          <a href="tel:+254707494395">+254 707 494 395</a>
+          <a href="mailto:sales@meltechelecandrefrigeration.co.ke">sales@meltechelecandrefrigeration.co.ke</a>
+          <a href="mailto:info@meltechelecandrefrigeration.co.ke">info@meltechelecandrefrigeration.co.ke</a>
+          <span>Eldoret, Kenya</span>
+          <span>Mon – Sat · 8:00 AM – 6:00 PM</span>
         </div>
       </div>
-
     </div>
-
-    <div class="footer-bottom">
-      <span>© 2026 MELTECH Electricals and Refrigeration Services</span>
-      <span>Built for reliability. Designed for performance.</span>
+    <div class="footend">
+      <span>© 2026 Meltech Electrical &amp; Refrigeration Services</span>
+      <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="cookie-policy.html">Cookie Policy</a></span>
+      <span>Powering comfort. Delivering reliability.</span>
     </div>
-
   </div>
 </footer>
 
