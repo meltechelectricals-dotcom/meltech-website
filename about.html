@@ -59,6 +59,12 @@
       margin:auto;
     }
 
+    .site-topbar{background:#050605;color:#c9c4b9;font-size:11px;letter-spacing:.04em;border-bottom:1px solid rgba(255,255,255,.08)}
+    .site-topbar-inner{height:36px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .site-topbar a{color:#c9c4b9;white-space:nowrap}
+    .site-topbar a:hover{color:#fff}
+    @media(max-width:560px){.site-topbar{font-size:9px}.site-topbar-inner{height:auto;min-height:34px;gap:8px}.site-topbar .hours{display:none}}
+
     /* HEADER */
 
     header{
@@ -682,6 +688,8 @@
 </head>
 
 <body>
+
+<div class="site-topbar"><div class="wrap site-topbar-inner"><span>Eldoret, Kenya · Mon – Sat · 8:00 AM – 6:00 PM · Eldoret, Kenya</span><a href="tel:+254707494395">+254 707 494 395</a></div></div>
 
 <header>
   <div class="wrap nav">
